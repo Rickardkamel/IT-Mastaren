@@ -1,0 +1,18 @@
+<!-- Header bar (inc. Back-button & ITM logo) -->
+<ion-tabs class="tabs-icon-top tabs-background-dark tabs-color-energized">
+
+    <!-- News tab -->
+    <ion-tab icon="ion-ios-paper" title="Nyheter" href="#/tab/news" ng-if="vm.loggedIn">
+        <ion-nav-view name="tab-news"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Absence tab -->
+    <ion-tab icon="ion-ios-person" title="Frånvaro" href="#/tab/EmployeeAbsence" ng-if="vm.loggedIn">
+        <ion-nav-view name="tab-absence"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Settings Tab -->
+    <ion-tab icon="ion-gear-a" title="Inställningar" href="#/tab/settings" ng-if="vm.loggedIn">
+        <ion-nav-view name="tab-settings"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

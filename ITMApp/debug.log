@@ -1,0 +1,1 @@
+[0418/133926:ERROR:process_info.cc(372)] NtQuerySystemInformation SystemExtendedHandleInformation: {För liten kvot} Det finns inte tillräckligt med virtuellt minne eller växlingsfilskvot för att slutföra den angivna åtgärden.  (0xc0000017)

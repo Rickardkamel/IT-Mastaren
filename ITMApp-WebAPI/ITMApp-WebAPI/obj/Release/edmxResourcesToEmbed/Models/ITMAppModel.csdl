@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITMAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ITMAppContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Absences" EntityType="ITMAppModel.Absence" />
+    <EntitySet Name="Employees" EntityType="ITMAppModel.Employee" />
+    <EntitySet Name="Employee_Absence" EntityType="ITMAppModel.Employee_Absence" />
+    <AssociationSet Name="FK__Employee___Absen__17AD7836" Association="ITMAppModel.FK__Employee___Absen__17AD7836">
+      <End Role="Absence" EntitySet="Absences" />
+      <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emplo__16B953FD" Association="ITMAppModel.FK__Employee___Emplo__16B953FD">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Absence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AbsenceType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employee_Absence" Relationship="ITMAppModel.FK__Employee___Absen__17AD7836" FromRole="Absence" ToRole="Employee_Absence" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employee_Absence" Relationship="ITMAppModel.FK__Employee___Emplo__16B953FD" FromRole="Employee" ToRole="Employee_Absence" />
+  </EntityType>
+  <EntityType Name="Employee_Absence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="AbsenceId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Absence" Relationship="ITMAppModel.FK__Employee___Absen__17AD7836" FromRole="Employee_Absence" ToRole="Absence" />
+    <NavigationProperty Name="Employee" Relationship="ITMAppModel.FK__Employee___Emplo__16B953FD" FromRole="Employee_Absence" ToRole="Employee" />
+    <Property Name="Removed" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Employee___Absen__17AD7836">
+    <End Type="ITMAppModel.Absence" Role="Absence" Multiplicity="1" />
+    <End Type="ITMAppModel.Employee_Absence" Role="Employee_Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Absence">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_Absence">
+        <PropertyRef Name="AbsenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emplo__16B953FD">
+    <End Type="ITMAppModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="ITMAppModel.Employee_Absence" Role="Employee_Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_Absence">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

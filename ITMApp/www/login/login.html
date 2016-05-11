@@ -1,0 +1,18 @@
+<ion-view>
+    <toaster-container style="margin-top: 20%" class="padding" toaster-options="{'toaster-id': 4, 'position-class': 'toast-top-full-width'}"></toaster-container>
+    <ion-pane style="background: url('./images/ItmPlaceGm.jpg')" view-title="Login" name="login-view" class="padding">
+        <ion-content>
+            <div style="margin-top: 60%" class="list list-inset">
+                <label class="item item-input">
+                <input type="text" placeholder="Username" ng-model="vm.loginForm.userName">
+            </label>
+                <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="vm.loginForm.password">
+            </label>
+            </div>
+            <button style="color: #F6A01C" class="button button-block button-dark" ng-click="vm.login()">
+            Logga in
+        </button>
+        </ion-content>
+    </ion-pane>
+</ion-view>

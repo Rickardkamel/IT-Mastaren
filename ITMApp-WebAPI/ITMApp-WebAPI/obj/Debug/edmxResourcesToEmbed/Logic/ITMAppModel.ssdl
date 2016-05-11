@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITMAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Absence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AbsenceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_Absence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="AbsenceId" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Employee___Absen__7187CF4E">
+    <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
+    <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Absence">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_Absence">
+        <PropertyRef Name="AbsenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee___Emplo__7093AB15">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_Absence">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ITMAppModelStoreContainer">
+    <EntitySet Name="Absence" EntityType="Self.Absence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Absence" EntityType="Self.Employee_Absence" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Employee___Absen__7187CF4E" Association="Self.FK__Employee___Absen__7187CF4E">
+      <End Role="Absence" EntitySet="Absence" />
+      <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee___Emplo__7093AB15" Association="Self.FK__Employee___Emplo__7093AB15">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\Contracts.dll.config
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\Contracts.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\Contracts.pdb
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\EntityFramework.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\EntityFramework.xml
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Release\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Release\Contracts.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Release\Contracts.pdb

@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+.table-header .col {
+    background-color: #444444;
+}
+
+i.ion-ios-plus-empty{
+    text-align: center;
+    color: #F6A01C;
+}
+
+.odd {
+    background-color: lightgrey;    
+}
+
+.popup-buttons .button{
+    color: #444444;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ion-option-button.button-orange {
+    border-color: transparent;
+    background-color: #F6A01C;
+    color: #444444; }
+
+/*.modal{
+  top: 20% !important;
+  right: 20% !important;
+  bottom: 20% !important;
+  left: 20% !important;
+  overflow: visible !important;
+  min-height: 240px !important;
+  width: 60% !important;
+}*/

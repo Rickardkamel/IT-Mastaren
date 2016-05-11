@@ -1,0 +1,20 @@
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.pdb
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.dll
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.pdb
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll.config
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.dll
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.xml
+C:\Users\Rickard Kamel\Desktop\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll.config
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.pdb
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.xml
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.dll
+C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.pdb
