@@ -11,7 +11,6 @@ angular.module('starter.newEmpAbs')
                 animation: 'slide-in-up'
             });
 
-        // Show dialog
         vm.showAddChangeDialog = function (action) {
             if (action == 'add') {
                 vm.absence = '';
