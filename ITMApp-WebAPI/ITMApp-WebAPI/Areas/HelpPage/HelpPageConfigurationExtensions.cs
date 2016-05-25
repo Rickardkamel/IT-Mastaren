@@ -13,6 +13,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using ITMApp_WebAPI.Areas.HelpPage.ModelDescriptions;
 using ITMApp_WebAPI.Areas.HelpPage.Models;
+using ITMApp_WebAPI.Areas.HelpPage.SampleGeneration;
 
 namespace ITMApp_WebAPI.Areas.HelpPage
 {

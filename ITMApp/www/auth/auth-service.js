@@ -36,20 +36,10 @@
                         displayName: response.displayName,
                     }
                     document.cookie = JSON.stringify(userInfo);
-                    // document.cookie = 'token' + angular.toJson({ token: response.access_token}); 
-                };
-                
-                // getCookie();
-                // function getCookie(cookieGoingOut) {
-                //   var userObj = response;
-                //  };
-                // window.localStorage['userName'] = response.userName;
-                // window.localStorage['email'] = response.email ;               
-                // window.localStorage['displayName'] = response.displayName;                                              
+                };                                          
 
                 $location.path('/tab/absence');
-                // window.location.reload();
-
+                
                 deferred.resolve(response);
             }).error(function (err, status) {
                 deferred.reject(err);

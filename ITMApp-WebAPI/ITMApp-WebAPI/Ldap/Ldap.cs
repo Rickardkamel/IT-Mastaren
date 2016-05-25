@@ -1,9 +1,8 @@
 ﻿using System;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
-using ITMApp_WebAPI.Ldap;
 
-namespace asdsad
+namespace ITMApp_WebAPI.Ldap
 {
     public class LdapAuthentication : ConfigFile
     {

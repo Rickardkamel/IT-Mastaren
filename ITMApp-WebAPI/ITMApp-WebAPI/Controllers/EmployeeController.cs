@@ -1,19 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using BusinessLogic.DataHandler;
 using Contracts;
-using ITMApp_WebAPI.DataHandler;
-using ITMApp_WebAPI.Models;
 
 namespace ITMApp_WebAPI.Controllers
 {
     [RoutePrefix("api/employee")]
     public class EmployeeController : ApiController
     {
-        private EmployeeHandler _employeeHandler;
-        public EmployeeController()
-        {
-            _employeeHandler = new EmployeeHandler(new ITMAppContext());
-        }
+        private EmployeeHandler _employeeHandler = new EmployeeHandler();
 
         [Route("")]
         public List<EmployeeModel> Get()

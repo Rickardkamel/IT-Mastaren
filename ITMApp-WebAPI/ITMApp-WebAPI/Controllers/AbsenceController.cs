@@ -1,18 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using BusinessLogic.DataHandler;
 using Contracts;
-using ITMApp_WebAPI.DataHandler;
-using ITMApp_WebAPI.Models;
 
 namespace ITMApp_WebAPI.Controllers
 {
     public class AbsenceController : ApiController
     {
-        private AbsenceHandler _absenceHandler;
-        public AbsenceController()
-        {
-            _absenceHandler = new AbsenceHandler(new ITMAppContext());
-        }
+        private AbsenceHandler _absenceHandler = new AbsenceHandler();
 
         public List<AbsenceModel> Get()
         {

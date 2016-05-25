@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37961E5B-B514-4FCB-AC79-5D957F1A440D}</ProjectGuid>
+    <ProjectGuid>{4E141B42-F21C-4559-9843-E3029F52DC9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mappers</RootNamespace>
@@ -47,6 +47,10 @@
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{0729ad59-2e8b-46aa-9899-2618f2e8c22d}</Project>
       <Name>Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataService\DataService.csproj">
+      <Project>{5143f3a9-23c7-45f6-ac41-73663115a0fc}</Project>
+      <Name>DataService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

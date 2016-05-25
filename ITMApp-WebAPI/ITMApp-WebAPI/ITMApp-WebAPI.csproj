@@ -245,40 +245,14 @@
     <Compile Include="Controllers\AbsenceController.cs" />
     <Compile Include="Controllers\EmployeeAbsenceController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="DataHandler\AbsenceHandler.cs" />
-    <Compile Include="DataHandler\EmployeeAbsenceHandler.cs" />
-    <Compile Include="DataHandler\EmployeeHandler.cs" />
+    <Compile Include="Controllers\LunchController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Ldap\ConfigFile.cs" />
     <Compile Include="Ldap\Ldap.cs" />
     <Compile Include="Ldap\UserProperties.cs" />
-    <Compile Include="Logic\Mapper.cs" />
-    <Compile Include="Models\Absence.cs">
-      <DependentUpon>ITMAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>ITMAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee_Absence.cs">
-      <DependentUpon>ITMAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ITMAppModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ITMAppModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ITMAppModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ITMAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ITMAppModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ITMAppModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -294,16 +268,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\ITMAppModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ITMAppModel.edmx</DependentUpon>
-      <LastGenOutput>ITMAppModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ITMAppModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ITMAppModel.edmx</DependentUpon>
-      <LastGenOutput>ITMAppModel.cs</LastGenOutput>
-    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -326,13 +290,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\ITMAppModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ITMAppModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ITMAppModel.edmx.diagram">
-      <DependentUpon>ITMAppModel.edmx</DependentUpon>
-    </Content>
     <None Include="Properties\PublishProfiles\DeployTEST.pubxml" />
     <None Include="Properties\PublishProfiles\NyTest.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -366,6 +323,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Lunch\" />
+    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -379,6 +338,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{bbf53fc6-d1c5-415d-82ef-fa0ba9614f8e}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{0729ad59-2e8b-46aa-9899-2618f2e8c22d}</Project>
       <Name>Contracts</Name>

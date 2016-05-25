@@ -1,4 +1,4 @@
-namespace ITMApp_WebAPI.Areas.HelpPage
+namespace ITMApp_WebAPI.Areas.HelpPage.SampleGeneration
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

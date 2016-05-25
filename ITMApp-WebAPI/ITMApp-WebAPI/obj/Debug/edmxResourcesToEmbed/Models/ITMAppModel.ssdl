@@ -27,7 +27,34 @@
     <Property Name="EndDate" Type="date" />
     <Property Name="Removed" Type="bit" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Employee___Absen__50E5F592">
+  <EntityType Name="Lunch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RestaurantId" Type="int" Nullable="false" />
+    <Property Name="LunchTime" Type="datetime" Nullable="false" />
+    <Property Name="Removed" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Lunch_Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+      <PropertyRef Name="LunchId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="LunchId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restaurant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK__Employee___Absen__5A846E65">
     <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -39,7 +66,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee___Emplo__4FF1D159">
+  <Association Name="FK__Employee___Emplo__59904A2C">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -51,17 +78,73 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Lunch__Restauran__5F492382">
+    <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="1" />
+    <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lunch">
+        <PropertyRef Name="RestaurantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lunch_Emp__Emplo__61316BF4">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lunch_Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lunch_Emp__Lunch__6225902D">
+    <End Role="Lunch" Type="Self.Lunch" Multiplicity="1" />
+    <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lunch">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lunch_Employee">
+        <PropertyRef Name="LunchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ITMAppModelStoreContainer">
     <EntitySet Name="Absence" EntityType="Self.Absence" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employee_Absence" EntityType="Self.Employee_Absence" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Employee___Absen__50E5F592" Association="Self.FK__Employee___Absen__50E5F592">
+    <EntitySet Name="Lunch" EntityType="Self.Lunch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lunch_Employee" EntityType="Self.Lunch_Employee" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Lunch_Employee].[EmployeeId] AS [EmployeeId], 
+    [Lunch_Employee].[LunchId] AS [LunchId]
+    FROM [dbo].[Lunch_Employee] AS [Lunch_Employee]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Employee___Absen__5A846E65" Association="Self.FK__Employee___Absen__5A846E65">
       <End Role="Absence" EntitySet="Absence" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee___Emplo__4FF1D159" Association="Self.FK__Employee___Emplo__4FF1D159">
+    <AssociationSet Name="FK__Employee___Emplo__59904A2C" Association="Self.FK__Employee___Emplo__59904A2C">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lunch__Restauran__5F492382" Association="Self.FK__Lunch__Restauran__5F492382">
+      <End Role="Restaurant" EntitySet="Restaurant" />
+      <End Role="Lunch" EntitySet="Lunch" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lunch_Emp__Emplo__61316BF4" Association="Self.FK__Lunch_Emp__Emplo__61316BF4">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lunch_Emp__Lunch__6225902D" Association="Self.FK__Lunch_Emp__Lunch__6225902D">
+      <End Role="Lunch" EntitySet="Lunch" />
+      <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

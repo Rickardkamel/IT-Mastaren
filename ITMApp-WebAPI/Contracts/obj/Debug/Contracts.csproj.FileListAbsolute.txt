@@ -18,3 +18,13 @@ C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\bi
 C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
 C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.dll
 C:\Users\rickam\Desktop\ITM\It Mästaren\ITMAPPWebApi\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll.config
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\Contracts.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.xml
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Contracts\obj\Debug\Contracts.pdb

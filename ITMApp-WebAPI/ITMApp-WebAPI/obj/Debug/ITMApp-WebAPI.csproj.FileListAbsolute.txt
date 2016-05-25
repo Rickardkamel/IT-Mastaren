@@ -262,3 +262,9 @@ C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\System.Web.H
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.dll
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\BusinessLogic.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\DataService.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\Mappers.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\BusinessLogic.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\DataService.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\Mappers.pdb
