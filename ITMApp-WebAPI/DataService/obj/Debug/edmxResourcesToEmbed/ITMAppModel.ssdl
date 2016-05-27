@@ -36,8 +36,6 @@
     <Property Name="LunchTime" Type="datetime" Nullable="false" />
     <Property Name="Removed" Type="bit" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Lunch_Employee">
     <Key>
       <PropertyRef Name="EmployeeId" />
@@ -53,6 +51,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Url" Type="nvarchar" MaxLength="200" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -64,7 +63,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <Association Name="FK__Employee___Absen__5A846E65">
+  <Association Name="FK__Employee___Absen__2354350C">
     <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -76,7 +75,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee___Emplo__59904A2C">
+  <Association Name="FK__Employee___Emplo__226010D3">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -88,7 +87,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch__Restauran__5F492382">
+  <Association Name="FK__Lunch__Restauran__2818EA29">
     <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="1" />
     <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
     <ReferentialConstraint>
@@ -100,7 +99,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch_Emp__Emplo__61316BF4">
+  <Association Name="FK__Lunch_Emp__Emplo__2A01329B">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -112,7 +111,7 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch_Emp__Lunch__6225902D">
+  <Association Name="FK__Lunch_Emp__Lunch__2AF556D4">
     <End Role="Lunch" Type="Self.Lunch" Multiplicity="1" />
     <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -129,31 +128,26 @@ warning 6002: The table/view 'ITMAppDB.dbo.Lunch_Employee' does not have a prima
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employee_Absence" EntityType="Self.Employee_Absence" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Lunch" EntityType="Self.Lunch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lunch_Employee" EntityType="Self.Lunch_Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Lunch_Employee" EntityType="Self.Lunch_Employee" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Lunch_Employee].[EmployeeId] AS [EmployeeId], 
-    [Lunch_Employee].[LunchId] AS [LunchId]
-    FROM [dbo].[Lunch_Employee] AS [Lunch_Employee]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK__Employee___Absen__5A846E65" Association="Self.FK__Employee___Absen__5A846E65">
+    <AssociationSet Name="FK__Employee___Absen__2354350C" Association="Self.FK__Employee___Absen__2354350C">
       <End Role="Absence" EntitySet="Absence" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee___Emplo__59904A2C" Association="Self.FK__Employee___Emplo__59904A2C">
+    <AssociationSet Name="FK__Employee___Emplo__226010D3" Association="Self.FK__Employee___Emplo__226010D3">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch__Restauran__5F492382" Association="Self.FK__Lunch__Restauran__5F492382">
+    <AssociationSet Name="FK__Lunch__Restauran__2818EA29" Association="Self.FK__Lunch__Restauran__2818EA29">
       <End Role="Restaurant" EntitySet="Restaurant" />
       <End Role="Lunch" EntitySet="Lunch" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch_Emp__Emplo__61316BF4" Association="Self.FK__Lunch_Emp__Emplo__61316BF4">
+    <AssociationSet Name="FK__Lunch_Emp__Emplo__2A01329B" Association="Self.FK__Lunch_Emp__Emplo__2A01329B">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch_Emp__Lunch__6225902D" Association="Self.FK__Lunch_Emp__Lunch__6225902D">
+    <AssociationSet Name="FK__Lunch_Emp__Lunch__2AF556D4" Association="Self.FK__Lunch_Emp__Lunch__2AF556D4">
       <End Role="Lunch" EntitySet="Lunch" />
       <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
     </AssociationSet>

@@ -153,7 +153,7 @@ namespace Mappers
             {
                 Id = restaurant.Id,
                 Name = restaurant.Name,
-                Url = restaurant.Url
+                ImagePath = restaurant.ImagePath
             };
         }
 
@@ -163,7 +163,7 @@ namespace Mappers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Url = x.Url
+                ImagePath = x.ImagePath
             });
         }
 
@@ -173,7 +173,7 @@ namespace Mappers
             {
                 Id = restaurant.Id,
                 Name = restaurant.Name,
-                Url = restaurant.Url
+                ImagePath = restaurant.ImagePath
             };
         }
 
@@ -183,7 +183,7 @@ namespace Mappers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Url = x.Url
+                ImagePath = x.ImagePath
             });
         }
 

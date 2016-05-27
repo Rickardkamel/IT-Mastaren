@@ -18,7 +18,10 @@
             postEmployeeAbsence: postEmployeeAbsence,
             deleteEmpAbs: deleteEmpAbs,
             postEmployee: postEmployee,
-            getLoggedInUser: getLoggedInUser
+            getLoggedInUser: getLoggedInUser,
+            getRestaurants: getRestaurants,
+            getLunches: getLunches,
+            postLunch: postLunch
         };
 
         var baseAdress = 'http://localhost:58054/';
@@ -90,6 +93,26 @@
         function postEmployee(data){
             return $http.post(baseAdress + 'api/Employee', data, config).success(function (data){
                 return data;
+            });
+        }
+        function getRestaurants(){
+            return $http.get(baseAdress + 'api/restaurant').then(function(response){
+                return response.data;
+            })
+        }
+        function postLunch(data){
+            return $http.post(baseAdress + 'api/lunch').then(function(data){
+                return data;
+            })
+        }
+        function getLunches(){
+            return $http.get(baseAdress + 'api/lunch').then(function(response){
+                return response.data;
+            })
+        }
+        function getLunch(id) {
+            return $http.get(baseAdress + 'api/lunch/' + id).then(function(response) {
+                return response.data;
             });
         }
     }

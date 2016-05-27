@@ -54,11 +54,6 @@
     <Compile Include="Absence.cs">
       <DependentUpon>ITMAppModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\AbsenceRepository.cs" />
-    <Compile Include="Repositories\EmployeeAbsenceRepository.cs" />
-    <Compile Include="Repositories\EmployeeRepository.cs" />
-    <Compile Include="Repositories\LunchRepository.cs" />
-    <Compile Include="Repositories\RestaurantRepository.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>ITMAppModel.tt</DependentUpon>
     </Compile>
@@ -83,6 +78,11 @@
     <Compile Include="Lunch.cs">
       <DependentUpon>ITMAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\AbsenceRepository.cs" />
+    <Compile Include="Repositories\EmployeeAbsenceRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\LunchRepository.cs" />
+    <Compile Include="Repositories\RestaurantRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restaurant.cs">
       <DependentUpon>ITMAppModel.tt</DependentUpon>

@@ -11,7 +11,8 @@ angular.module('starter', [
     'starter.auth',    
     'starter.login',
     'starter.tabs',
-    'starter.settings'
+    'starter.settings',
+    'starter.lunch',
         
 ])
 
@@ -60,6 +61,16 @@ angular.module('starter', [
                     'tab-settings': {
                         templateUrl: 'settings/settings.html',
                         controller: 'SettingsController as vm'
+                    }
+                }
+            })
+            
+            .state('tab.lunch', {
+                url: '/lunch',
+                views: {
+                    'tab-lunch': {
+                        templateUrl: 'lunch/lunch.html',
+                        controller: 'LunchController as vm'
                     }
                 }
             })

@@ -10,8 +10,9 @@ namespace DataService.Repositories
         private ITMAppContext _context = new ITMAppContext();
         public List<Lunch> GetAll()
         {
-            var nowPlusOne = DateTime.Now.AddHours(1);
-            return _context.Lunches.Where(x => x.Removed == false && (x.LunchTime < nowPlusOne)).ToList();
+            //var nowPlusOne = DateTime.Now.AddHours(1);
+            return _context.Lunches.Where(x => x.Removed == false).ToList();
+             //&& (x.LunchTime < nowPlusOne)
         }
 
         public Lunch Get(int id)

@@ -21,7 +21,7 @@ namespace DataService
         }
     
         public int Id { get; set; }
-        public int RestaurantId { get; set; }
+        public Nullable<int> RestaurantId { get; set; }
         public System.DateTime LunchTime { get; set; }
         public bool Removed { get; set; }
     

@@ -1,9 +1,4 @@
 <ion-view ng-controller="newEmpAbsCtrl as vm">
-    <ion-nav-bar class="bar-dark item-icon-left">
-    </ion-nav-bar>
-    <ion-nav-title>
-        <h2 style="left: 49px; right: 49px"><img src="images/litengul.png" style="height: 55px; width: 55px"></h2>
-    </ion-nav-title>
     <ion-nav-buttons side="right">
         <a style="color: #F6A01C;" class="button button-clear icon-left ion-plus" ng-click="vm.showAddChangeDialog('add')"></a>
     </ion-nav-buttons>
@@ -15,8 +10,8 @@
                 <div class="col col-20">Åter</div>
             </div></strong>
 
-            	<ion-list >
-                <ion-item  ng-repeat="empAbs in vm.list.data | filter:{Removed:false}">
+            <ion-list>
+                <ion-item ng-repeat="empAbs in vm.list.data | filter:{Removed:false}">
                     <div class="row">
                         <h3 class="col col-50">{{empAbs.Employee.Name}}</h3>
                         <h3 class="col col-40">{{empAbs.Absence.Name}}</h3>
