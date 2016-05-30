@@ -32,7 +32,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RestaurantId" Type="int" Nullable="false" />
+    <Property Name="RestaurantId" Type="int" />
     <Property Name="LunchTime" Type="datetime" Nullable="false" />
     <Property Name="Removed" Type="bit" Nullable="false" />
   </EntityType>
@@ -50,8 +50,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Url" Type="nvarchar" MaxLength="200" />
-    <Property Name="ImagePath" Type="nvarchar" MaxLength="150" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -63,7 +62,7 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <Association Name="FK__Employee___Absen__2354350C">
+  <Association Name="FK__Employee___Absen__1D66518C">
     <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -75,7 +74,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee___Emplo__226010D3">
+  <Association Name="FK__Employee___Emplo__1C722D53">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
     <ReferentialConstraint>
@@ -87,8 +86,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch__Restauran__2818EA29">
-    <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="1" />
+  <Association Name="FK__Lunch__Restauran__222B06A9">
+    <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />
     <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Restaurant">
@@ -99,7 +98,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch_Emp__Emplo__2A01329B">
+  <Association Name="FK__Lunch_Emp__Emplo__24134F1B">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -111,7 +110,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Lunch_Emp__Lunch__2AF556D4">
+  <Association Name="FK__Lunch_Emp__Lunch__25077354">
     <End Role="Lunch" Type="Self.Lunch" Multiplicity="1" />
     <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -131,23 +130,23 @@
     <EntitySet Name="Lunch_Employee" EntityType="Self.Lunch_Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Employee___Absen__2354350C" Association="Self.FK__Employee___Absen__2354350C">
+    <AssociationSet Name="FK__Employee___Absen__1D66518C" Association="Self.FK__Employee___Absen__1D66518C">
       <End Role="Absence" EntitySet="Absence" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee___Emplo__226010D3" Association="Self.FK__Employee___Emplo__226010D3">
+    <AssociationSet Name="FK__Employee___Emplo__1C722D53" Association="Self.FK__Employee___Emplo__1C722D53">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Employee_Absence" EntitySet="Employee_Absence" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch__Restauran__2818EA29" Association="Self.FK__Lunch__Restauran__2818EA29">
+    <AssociationSet Name="FK__Lunch__Restauran__222B06A9" Association="Self.FK__Lunch__Restauran__222B06A9">
       <End Role="Restaurant" EntitySet="Restaurant" />
       <End Role="Lunch" EntitySet="Lunch" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch_Emp__Emplo__2A01329B" Association="Self.FK__Lunch_Emp__Emplo__2A01329B">
+    <AssociationSet Name="FK__Lunch_Emp__Emplo__24134F1B" Association="Self.FK__Lunch_Emp__Emplo__24134F1B">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__Lunch_Emp__Lunch__2AF556D4" Association="Self.FK__Lunch_Emp__Lunch__2AF556D4">
+    <AssociationSet Name="FK__Lunch_Emp__Lunch__25077354" Association="Self.FK__Lunch_Emp__Lunch__25077354">
       <End Role="Lunch" EntitySet="Lunch" />
       <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
     </AssociationSet>

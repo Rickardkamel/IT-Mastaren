@@ -8,3 +8,13 @@ C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\EntityFr
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.csprojResolveAssemblyReference.cache
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.dll
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\DataService.dll.config
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\DataService.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\DataService.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\EntityFramework.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\EntityFramework.xml
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Debug\DataService.pdb

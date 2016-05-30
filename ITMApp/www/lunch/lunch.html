@@ -1,11 +1,24 @@
 <ion-view>
-    <ion-content scroll="false">
+    <ion-nav-buttons side="right">
+        <a style="color: #F6A01C;" class="button button-clear icon-left ion-plus" ng-click=""></a>
+    </ion-nav-buttons>
+    <ion-content scroll="false" on-finish-render="ngRepeatFinished">
         <div class="swiper-container">
-            <div class="swiper-wrapper" ng-repeat="lunch in vm.lunchList.data">
-                <div class="swiper-slide" style="background-image:url({{lunch.Image}})"></div>
+            <div class="swiper-wrapper" >
+                <div class="swiper-slide" ng-repeat="lunch in vm.lunchList.data" style="background-image:url(images/{{lunch.Restaurant.ImagePath}})" >
+                    <div class="upper-box">
+                    <h4>{{lunch.Restaurant.Name}}</h4>
+                    </div>
+                    <div class="box-template">
+                        <div ng-repeat="employee in lunch.EmployeesList">
+                            {{employee.Name}}
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
+
         </div>
     </ion-content>
 </ion-view>

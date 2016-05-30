@@ -9,3 +9,14 @@ C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\EntityFramew
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.csprojResolveAssemblyReference.cache
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.dll
 C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\Mappers.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\Mappers.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\Contracts.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\DataService.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\EntityFramework.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\Contracts.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\DataService.pdb
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\bin\Debug\EntityFramework.xml
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.dll
+C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\Mappers\obj\Debug\Mappers.pdb

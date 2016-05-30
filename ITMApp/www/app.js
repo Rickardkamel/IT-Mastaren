@@ -13,6 +13,7 @@ angular.module('starter', [
     'starter.tabs',
     'starter.settings',
     'starter.lunch',
+    'directives.module'
         
 ])
 
