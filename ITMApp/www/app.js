@@ -80,7 +80,7 @@ angular.module('starter', [
                 url: '/absence',
                 views: {
                     'tab-absence': {
-                        templateUrl: 'empabs/employeeAbsence.html',
+                        templateUrl: 'employee-absence/employeeAbsence.html',
                         controller: ''
                     }
                 }

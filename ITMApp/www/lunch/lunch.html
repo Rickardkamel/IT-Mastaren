@@ -4,25 +4,26 @@
     </ion-nav-buttons>
     <ion-content scroll="false" on-finish-render="ngRepeatFinished">
         <div class="swiper-container">
-            <div class="swiper-wrapper" >
-                <div class="swiper-slide" ng-repeat="lunch in vm.lunchList.data" style="background-image:url(images/{{lunch.Restaurant.ImagePath}})" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="lunch in vm.lunchList.data" style="background-image:url(images/{{lunch.Restaurant.ImagePath}})">
                     <div class="upper-box">
-                    <h4>{{lunch.Restaurant.Name}}</h4>
+                        <h4>{{lunch.Restaurant.Name}}</h4>                 
+                        <h5>{{lunch.LunchTime | date:'HH:mm'}}</h5>
                     </div>
-                    <div class="box-template">
+                    <div class=" box-template">
                         <div ng-repeat="employee in lunch.EmployeesList">
-                            {{employee.Name}}
+                            <div style="font-size: 18px">{{employee.Name}}</div>                            
                         </div>
                     </div>
+                    <button ng-click="vm.joinLunch(lunch.Id)" class="bottom-button button-block button button-energized"><strong>ANMÄL MIG TILL DENNA LUNCH</strong></button>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
         </div>
     </ion-content>
 </ion-view>
-
 
 <!--
     

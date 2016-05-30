@@ -2,7 +2,7 @@ angular.module('starter.newEmpAbs')
     .controller('newEmpAbsCtrl', ['dataservice', '$scope', '$ionicModal', 'toaster', '$http', '$timeout', function (dataservice, $scope, $ionicModal, toaster, $http, $timeout) {
         var vm = this;
         getList();
-        $ionicModal.fromTemplateUrl('empabs/newEmployeeAbsence.html', function (modal) {
+        $ionicModal.fromTemplateUrl('employee-absence/newEmployeeAbsence.html', function (modal) {
             var today = new Date();
             vm.startDate = today;
             vm.addDialog = modal;
@@ -27,7 +27,7 @@ angular.module('starter.newEmpAbs')
             var today = new Date();
             vm.startDate = today;
             // Reload modal template to have cleared form
-            $ionicModal.fromTemplateUrl('empabs/newEmployeeAbsence.html', function (modal) {
+            $ionicModal.fromTemplateUrl('employee-absence/newEmployeeAbsence.html', function (modal) {
                 vm.addDialog = modal;
             }, {
                     scope: $scope,
@@ -54,7 +54,7 @@ angular.module('starter.newEmpAbs')
         }
 
         vm.addEmpAbs = function (form) {
-            var userName = getCookie(document.cookie);
+            var userName = getCookie(document.cookie.replace(/(?:(?:^|.*;\s*)userObject\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
 
             function getCookie(userObject) {
                 var parsedCookie = JSON.parse(userObject);
@@ -115,11 +115,11 @@ angular.module('starter.newEmpAbs')
                     })
                 } else {
                     toaster.pop({
-                            type: 'error',
-                            title: 'Fel!',
-                            body: 'Tillbaka-datumet är tidigare än Start-datumet',
-                            timeout: 2000
-                        })
+                        type: 'error',
+                        title: 'Fel!',
+                        body: 'Tillbaka-datumet är tidigare än Start-datumet',
+                        timeout: 2000
+                    })
                 }
             })
         };

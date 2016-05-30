@@ -20,7 +20,7 @@ namespace ITMApp_WebAPI.Controllers
 
             if (lunch == null) return NotFound();
 
-            return Ok();
+            return Ok(lunch);
         }
 
         public IHttpActionResult Post(LunchModel lunch)

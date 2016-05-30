@@ -39,6 +39,9 @@ ion-option-button.button-orange {
      
 }.upper-box h4{
     color: #F6A01C;    
+}.upper-box h5{
+    margin-top: -7px;
+    color: #F6A01C;
 }
 
 .box-template {
@@ -46,9 +49,21 @@ ion-option-button.button-orange {
     color: #F6A01C;
     text-align: center;
     width: 50%;
-    height: 150px;
+    min-height: 150px;
     margin: 0 auto;
     margin-top: 50%;
+    border-radius: 30px;
+    opacity: 0.9;    
+    
+    
+}
+
+.bottom-button {
+    color: #444444 !important;
+    border-radius: 20px;
+    position: absolute;
+    right:    0;
+    bottom:   0;
 }
 
 

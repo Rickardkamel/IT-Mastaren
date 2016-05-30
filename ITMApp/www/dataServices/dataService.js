@@ -21,7 +21,8 @@
             getLoggedInUser: getLoggedInUser,
             getRestaurants: getRestaurants,
             getLunches: getLunches,
-            postLunch: postLunch
+            postLunch: postLunch,
+            getLunch: getLunch
         };
 
         var baseAdress = 'http://localhost:58054/';
@@ -101,7 +102,7 @@
             })
         }
         function postLunch(data){
-            return $http.post(baseAdress + 'api/lunch').then(function(data){
+            return $http.post(baseAdress + 'api/lunch', data).then(function(data){
                 return data;
             })
         }

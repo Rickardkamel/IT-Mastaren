@@ -42,7 +42,7 @@ namespace DataService.Repositories
             if (lunch == null) return false;
             lunch.Removed = true;
 
-            _context.Lunches.AddOrUpdate(lunch as Lunch);
+            _context.Lunches.AddOrUpdate(lunch);
             _context.SaveChanges();
             return true;
         }

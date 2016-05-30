@@ -13,7 +13,7 @@
             login: login
         };
         
-        
+        document.cookie
         return services;
 
         // Login logic
@@ -25,6 +25,8 @@
             $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
                 window.localStorage.setItem('token', angular.toJson({ token: response.access_token }));
                 
+            
+                
                 setCookie(response);
                 function setCookie(response) {
                     var d = new Date();
@@ -35,7 +37,7 @@
                         email: response.email,
                         displayName: response.displayName,
                     }
-                    document.cookie = JSON.stringify(userInfo);
+                    document.cookie = "userObject =" + JSON.stringify(userInfo);
                 };                                          
 
                 $location.path('/tab/absence');
