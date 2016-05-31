@@ -196,6 +196,7 @@ namespace Mappers
                 EmployeesList = lunch.Employees.ToList().ToContracts(),
                 LunchTime = lunch.LunchTime,
                 Restaurant = lunch.Restaurant.ToContract(),
+                RestaurantId = lunch.Restaurant.Id,
                 Removed = lunch.Removed
             };
         }
@@ -208,6 +209,7 @@ namespace Mappers
                 EmployeesList = x.Employees.ToList().ToContracts(),
                 LunchTime = x.LunchTime,
                 Restaurant = x.Restaurant.ToContract(),
+                RestaurantId = x.Restaurant.Id,
                 Removed = x.Removed
             });
         }
@@ -221,6 +223,7 @@ namespace Mappers
                 Employees = lunch.EmployeesList.ToDataBaseEntities(),
                 LunchTime = lunch.LunchTime,
                 Restaurant = lunch.Restaurant.ToDataBaseEntity(),
+                RestaurantId = lunch.Restaurant.Id,
                 Removed = lunch.Removed
             };
         }
@@ -233,6 +236,7 @@ namespace Mappers
                 Employees = x.EmployeesList.ToDataBaseEntities(),
                 LunchTime = x.LunchTime,
                 Restaurant = x.Restaurant.ToDataBaseEntity(),
+                RestaurantId = x.Restaurant.Id,
                 Removed = x.Removed
             });
         }

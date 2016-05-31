@@ -54,10 +54,9 @@
                 vm.loggedIn = dataservice.getLoggedInUser(userName).then(function (response) {
                     vm.loggedIn.data = response;
 
-                    vm.thisLunch.data.EmployeesList.push(vm.loggedIn)
+                    vm.thisLunch.data.EmployeesList.push(vm.loggedIn.data)
 
                     dataservice.postLunch(vm.thisLunch.data).then(function (response) {
-                        getLunches();
                     })
                 })
             })

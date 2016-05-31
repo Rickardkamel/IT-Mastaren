@@ -56,36 +56,36 @@ CREATE TABLE Restaurant
 )
 
 INSERT INTO Restaurant (Name, ImagePath)
-VALUES	('Burger Love', '\burgerlove.jpg'),
-		('McDonald큦', '\mcdonalds.jpg'),
-		('Burger King', '\burgerking.jpg'),
-		('Sallad Inn', '\salladinn.jpg'),
-		('Dannes', '\dannes.jpg'),
-		('Grekiska Kolgrillsbaren', '\greken.jpg'),
-		('Sweet Chili', '\sweetchili.jpg'),
-		('Coco Thai', '\cocothai.jpg'),
-		('Subway', '\subway.jpg'),
-		('Texas Star', '\texasstar.jpg'),
-		('Saluhallen', '\saluhallen.jpg'),
-		('Rosalis Deli', '\rosalis.jpg'),
-		('Wongs', '\wongs.jpg'),
-		('Pitcher큦', '\pitchers.jpg'),
-		('Mike큦 Foodtruck', '\mikesfoodtruck.jpg'),
-		('Sushi Yama', '\sushiyama.jpg'),
-		('La Pampa', '\pampa.jpg'),
-		('Kinamuren', '\kinamuren.jpg'),
-		('Texas Longhorn', '\texaslonghorn.jpg'),
-		('Strike & Co', '\strikeoco.jpg'),
-		('NorrTull', '\norrtull.jpg'),
-		('Wobbler', '\wobbler.jpg'),
-		('Jensens Bofhus', '\jensen.jpg'),
-		('Svalan', '\svalan.jpg')
+VALUES	('Burger Love', 'burgerlove.jpg'),
+		('McDonald큦', 'mcdonalds.jpg'),
+		('Burger King', 'burgerking.jpg'),
+		('Sallad Inn', 'salladinn.jpg'),
+		('Dannes', 'dannes.jpg'),
+		('Grekiska Kolgrillsbaren', 'greken.jpg'),
+		('Sweet Chili', 'sweetchili.jpg'),
+		('Coco Thai', 'cocothai.jpg'),
+		('Subway', 'subway.jpg'),
+		('Texas Star', 'texasstar.jpg'),
+		('Saluhallen', 'saluhallen.jpg'),
+		('Rosalis Deli', 'rosalis.jpg'),
+		('Wongs', 'wongs.jpg'),
+		('Pitcher큦', 'pitchers.jpg'),
+		('Mike큦 Foodtruck', 'mikesfoodtruck.jpg'),
+		('Sushi Yama', 'sushiyama.jpg'),
+		('La Pampa', 'pampa.jpg'),
+		('Kinamuren', 'kinamuren.jpg'),
+		('Texas Longhorn', 'texaslonghorn.jpg'),
+		('Strike & Co', 'strikeoco.jpg'),
+		('NorrTull', 'norrtull.jpg'),
+		('Wobbler', 'wobbler.jpg'),
+		('Jensens Bofhus', 'jensen.jpg'),
+		('Svalan', 'svalan.jpg')
 
 
 CREATE TABLE Lunch 
 (
 	Id INT PRIMARY KEY IDENTITY,
-	RestaurantId INT FOREIGN KEY REFERENCES Restaurant(Id),
+	RestaurantId INT FOREIGN KEY REFERENCES Restaurant(Id) NOT NULL,
 	LunchTime DATETIME NOT NULL,
 	Removed BIT NOT NULL
 )
@@ -93,7 +93,9 @@ CREATE TABLE Lunch
 INSERT INTO Lunch (RestaurantId, LunchTime, Removed)
 VALUES	('1', '2016-05-24 18:00', 0),
 		('2', '2016-05-24 18:00', 0),
-		('3', '2016-05-24 18:00', 0)
+		('3', '2016-05-24 18:00', 0),
+		('4', '2016-05-24 18:00', 0),
+		('5', '2016-05-24 18:00', 0)
 
 CREATE TABLE Lunch_Employee
 (
@@ -106,9 +108,11 @@ ADD CONSTRAINT PK_LunEmp
 PRIMARY KEY (EmployeeId, LunchId)
 
 INSERT INTO Lunch_Employee (EmployeeId, LunchId)
-VALUES	(1 , 1), (2 , 1),
-		(3 , 2), (4 , 2),
-		(5 , 3)
+VALUES	(1 , 1), 
+		(2 , 2),
+		(3 , 3), 
+		(4 , 4),
+		(5 , 5)
 
 
 
@@ -132,7 +136,7 @@ SELECT * FROM Restaurant
 
 SELECT * FROM Lunch
 
-SELECT Lunch.RestaurantId AS [Restaurant Name], 
+SELECT Lunch.Id AS [Lunch ID], 
 Employee.Name AS [Employee Name]
 FROM Lunch_Employee
 JOIN Employee

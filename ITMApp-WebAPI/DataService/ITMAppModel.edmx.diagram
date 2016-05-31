@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="030fb8e0907e4382a84c2daa91cf1e4e" Name="Diagram1">
-        <EntityTypeShape EntityType="ITMAppDBModel.Absence" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITMAppDBModel.Employee" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITMAppDBModel.Employee_Absence" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITMAppDBModel.Lunch" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITMAppDBModel.Restaurant" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITMAppDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.5" IsExpanded="true" />
-        <AssociationConnector Association="ITMAppDBModel.FK__Employee___Absen__1D66518C" ManuallyRouted="false" />
-        <AssociationConnector Association="ITMAppDBModel.FK__Employee___Emplo__1C722D53" ManuallyRouted="false" />
-        <AssociationConnector Association="ITMAppDBModel.FK__Lunch__Restauran__222B06A9" ManuallyRouted="false" />
-        <AssociationConnector Association="ITMAppDBModel.Lunch_Employee" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ITMAppDBModel.Absence" Width="1.5" PointX="3.75" PointY="0.875" />
+        <EntityTypeShape EntityType="ITMAppDBModel.Employee" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="ITMAppDBModel.Employee_Absence" Width="1.5" PointX="6" PointY="3.375" />
+        <EntityTypeShape EntityType="ITMAppDBModel.Lunch" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="ITMAppDBModel.Restaurant" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ITMAppDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.5" />
+        <AssociationConnector Association="ITMAppDBModel.FK__Employee___Absen__23A93AC7" />
+        <AssociationConnector Association="ITMAppDBModel.FK__Employee___Emplo__22B5168E" />
+        <AssociationConnector Association="ITMAppDBModel.FK__Lunch__Restauran__286DEFE4" />
+        <AssociationConnector Association="ITMAppDBModel.Lunch_Employee" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

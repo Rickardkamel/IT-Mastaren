@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ITMAppDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ITMAppDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Absence">
           <Key>
             <PropertyRef Name="Id" />
@@ -37,7 +37,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RestaurantId" Type="int" />
+          <Property Name="RestaurantId" Type="int" Nullable="false" />
           <Property Name="LunchTime" Type="datetime" Nullable="false" />
           <Property Name="Removed" Type="bit" Nullable="false" />
         </EntityType>
@@ -67,7 +67,7 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
-        <Association Name="FK__Employee___Absen__1D66518C">
+        <Association Name="FK__Employee___Absen__23A93AC7">
           <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
           <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -79,7 +79,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employee___Emplo__1C722D53">
+        <Association Name="FK__Employee___Emplo__22B5168E">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -91,8 +91,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Lunch__Restauran__222B06A9">
-          <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />
+        <Association Name="FK__Lunch__Restauran__286DEFE4">
+          <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="1" />
           <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Restaurant">
@@ -103,7 +103,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Lunch_Emp__Emplo__24134F1B">
+        <Association Name="FK__Lunch_Emp__Emplo__2A563856">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -115,7 +115,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Lunch_Emp__Lunch__25077354">
+        <Association Name="FK__Lunch_Emp__Lunch__2B4A5C8F">
           <End Role="Lunch" Type="Self.Lunch" Multiplicity="1" />
           <End Role="Lunch_Employee" Type="Self.Lunch_Employee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -135,50 +135,73 @@
           <EntitySet Name="Lunch_Employee" EntityType="Self.Lunch_Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Employee___Absen__1D66518C" Association="Self.FK__Employee___Absen__1D66518C">
+          <AssociationSet Name="FK__Employee___Absen__23A93AC7" Association="Self.FK__Employee___Absen__23A93AC7">
             <End Role="Absence" EntitySet="Absence" />
             <End Role="Employee_Absence" EntitySet="Employee_Absence" />
           </AssociationSet>
-          <AssociationSet Name="FK__Employee___Emplo__1C722D53" Association="Self.FK__Employee___Emplo__1C722D53">
+          <AssociationSet Name="FK__Employee___Emplo__22B5168E" Association="Self.FK__Employee___Emplo__22B5168E">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Employee_Absence" EntitySet="Employee_Absence" />
           </AssociationSet>
-          <AssociationSet Name="FK__Lunch__Restauran__222B06A9" Association="Self.FK__Lunch__Restauran__222B06A9">
+          <AssociationSet Name="FK__Lunch__Restauran__286DEFE4" Association="Self.FK__Lunch__Restauran__286DEFE4">
             <End Role="Restaurant" EntitySet="Restaurant" />
             <End Role="Lunch" EntitySet="Lunch" />
           </AssociationSet>
-          <AssociationSet Name="FK__Lunch_Emp__Emplo__24134F1B" Association="Self.FK__Lunch_Emp__Emplo__24134F1B">
+          <AssociationSet Name="FK__Lunch_Emp__Emplo__2A563856" Association="Self.FK__Lunch_Emp__Emplo__2A563856">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK__Lunch_Emp__Lunch__25077354" Association="Self.FK__Lunch_Emp__Lunch__25077354">
+          <AssociationSet Name="FK__Lunch_Emp__Lunch__2B4A5C8F" Association="Self.FK__Lunch_Emp__Lunch__2B4A5C8F">
             <End Role="Lunch" EntitySet="Lunch" />
             <End Role="Lunch_Employee" EntitySet="Lunch_Employee" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ITMAppDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ITMAppContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Absences" EntityType="ITMAppDBModel.Absence" />
+          <EntitySet Name="Employees" EntityType="ITMAppDBModel.Employee" />
+          <EntitySet Name="Employee_Absence" EntityType="ITMAppDBModel.Employee_Absence" />
+          <EntitySet Name="Lunches" EntityType="ITMAppDBModel.Lunch" />
+          <EntitySet Name="Restaurants" EntityType="ITMAppDBModel.Restaurant" />
+          <EntitySet Name="sysdiagrams" EntityType="ITMAppDBModel.sysdiagram" />
+          <AssociationSet Name="FK__Employee___Absen__23A93AC7" Association="ITMAppDBModel.FK__Employee___Absen__23A93AC7">
+            <End Role="Absence" EntitySet="Absences" />
+            <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employee___Emplo__22B5168E" Association="ITMAppDBModel.FK__Employee___Emplo__22B5168E">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Employee_Absence" EntitySet="Employee_Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Lunch__Restauran__286DEFE4" Association="ITMAppDBModel.FK__Lunch__Restauran__286DEFE4">
+            <End Role="Restaurant" EntitySet="Restaurants" />
+            <End Role="Lunch" EntitySet="Lunches" />
+          </AssociationSet>
+          <AssociationSet Name="Lunch_Employee" Association="ITMAppDBModel.Lunch_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Lunch" EntitySet="Lunches" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Absence">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AbsenceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Employee_Absence" Relationship="Self.FK__Employee___Absen__1D66518C" FromRole="Absence" ToRole="Employee_Absence" />
+          <Property Name="AbsenceType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee_Absence" Relationship="ITMAppDBModel.FK__Employee___Absen__23A93AC7" FromRole="Absence" ToRole="Employee_Absence" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Employee_Absence" Relationship="Self.FK__Employee___Emplo__1C722D53" FromRole="Employee" ToRole="Employee_Absence" />
-          <NavigationProperty Name="Lunches" Relationship="Self.Lunch_Employee" FromRole="Employee" ToRole="Lunch" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee_Absence" Relationship="ITMAppDBModel.FK__Employee___Emplo__22B5168E" FromRole="Employee" ToRole="Employee_Absence" />
+          <NavigationProperty Name="Lunches" Relationship="ITMAppDBModel.Lunch_Employee" FromRole="Employee" ToRole="Lunch" />
         </EntityType>
         <EntityType Name="Employee_Absence">
           <Key>
@@ -190,42 +213,42 @@
           <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="Removed" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Absence" Relationship="Self.FK__Employee___Absen__1D66518C" FromRole="Employee_Absence" ToRole="Absence" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__Employee___Emplo__1C722D53" FromRole="Employee_Absence" ToRole="Employee" />
+          <NavigationProperty Name="Absence" Relationship="ITMAppDBModel.FK__Employee___Absen__23A93AC7" FromRole="Employee_Absence" ToRole="Absence" />
+          <NavigationProperty Name="Employee" Relationship="ITMAppDBModel.FK__Employee___Emplo__22B5168E" FromRole="Employee_Absence" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Lunch">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RestaurantId" Type="Int32" />
+          <Property Name="RestaurantId" Type="Int32" Nullable="false" />
           <Property Name="LunchTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Removed" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Restaurant" Relationship="Self.FK__Lunch__Restauran__222B06A9" FromRole="Lunch" ToRole="Restaurant" />
-          <NavigationProperty Name="Employees" Relationship="Self.Lunch_Employee" FromRole="Lunch" ToRole="Employee" />
+          <NavigationProperty Name="Restaurant" Relationship="ITMAppDBModel.FK__Lunch__Restauran__286DEFE4" FromRole="Lunch" ToRole="Restaurant" />
+          <NavigationProperty Name="Employees" Relationship="ITMAppDBModel.Lunch_Employee" FromRole="Lunch" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Restaurant">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Lunches" Relationship="Self.FK__Lunch__Restauran__222B06A9" FromRole="Restaurant" ToRole="Lunch" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Lunches" Relationship="ITMAppDBModel.FK__Lunch__Restauran__286DEFE4" FromRole="Restaurant" ToRole="Lunch" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK__Employee___Absen__1D66518C">
-          <End Role="Absence" Type="Self.Absence" Multiplicity="1" />
-          <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
+        <Association Name="FK__Employee___Absen__23A93AC7">
+          <End Type="ITMAppDBModel.Absence" Role="Absence" Multiplicity="1" />
+          <End Type="ITMAppDBModel.Employee_Absence" Role="Employee_Absence" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Absence">
               <PropertyRef Name="Id" />
@@ -235,9 +258,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employee___Emplo__1C722D53">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
-          <End Role="Employee_Absence" Type="Self.Employee_Absence" Multiplicity="*" />
+        <Association Name="FK__Employee___Emplo__22B5168E">
+          <End Type="ITMAppDBModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="ITMAppDBModel.Employee_Absence" Role="Employee_Absence" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
               <PropertyRef Name="Id" />
@@ -247,9 +270,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Lunch__Restauran__222B06A9">
-          <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />
-          <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
+        <Association Name="FK__Lunch__Restauran__286DEFE4">
+          <End Type="ITMAppDBModel.Restaurant" Role="Restaurant" Multiplicity="1" />
+          <End Type="ITMAppDBModel.Lunch" Role="Lunch" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Restaurant">
               <PropertyRef Name="Id" />
@@ -260,33 +283,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Lunch_Employee">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-          <End Role="Lunch" Type="Self.Lunch" Multiplicity="*" />
+          <End Type="ITMAppDBModel.Employee" Role="Employee" Multiplicity="*" />
+          <End Type="ITMAppDBModel.Lunch" Role="Lunch" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="ITMAppContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Absences" EntityType="Self.Absence" />
-          <EntitySet Name="Employees" EntityType="Self.Employee" />
-          <EntitySet Name="Employee_Absence" EntityType="Self.Employee_Absence" />
-          <EntitySet Name="Lunches" EntityType="Self.Lunch" />
-          <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK__Employee___Absen__1D66518C" Association="Self.FK__Employee___Absen__1D66518C">
-            <End Role="Absence" EntitySet="Absences" />
-            <End Role="Employee_Absence" EntitySet="Employee_Absence" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Employee___Emplo__1C722D53" Association="Self.FK__Employee___Emplo__1C722D53">
-            <End Role="Employee" EntitySet="Employees" />
-            <End Role="Employee_Absence" EntitySet="Employee_Absence" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Lunch__Restauran__222B06A9" Association="Self.FK__Lunch__Restauran__222B06A9">
-            <End Role="Restaurant" EntitySet="Restaurants" />
-            <End Role="Lunch" EntitySet="Lunches" />
-          </AssociationSet>
-          <AssociationSet Name="Lunch_Employee" Association="Self.Lunch_Employee">
-            <End Role="Employee" EntitySet="Employees" />
-            <End Role="Lunch" EntitySet="Lunches" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -296,69 +295,69 @@
           <EntitySetMapping Name="Absences">
             <EntityTypeMapping TypeName="ITMAppDBModel.Absence">
               <MappingFragment StoreEntitySet="Absence">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AbsenceType" ColumnName="AbsenceType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="ITMAppDBModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employee_Absence">
             <EntityTypeMapping TypeName="ITMAppDBModel.Employee_Absence">
               <MappingFragment StoreEntitySet="Employee_Absence">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
-                <ScalarProperty Name="AbsenceId" ColumnName="AbsenceId" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
                 <ScalarProperty Name="Removed" ColumnName="Removed" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="AbsenceId" ColumnName="AbsenceId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Lunches">
             <EntityTypeMapping TypeName="ITMAppDBModel.Lunch">
               <MappingFragment StoreEntitySet="Lunch">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="RestaurantId" ColumnName="RestaurantId" />
-                <ScalarProperty Name="LunchTime" ColumnName="LunchTime" />
                 <ScalarProperty Name="Removed" ColumnName="Removed" />
+                <ScalarProperty Name="LunchTime" ColumnName="LunchTime" />
+                <ScalarProperty Name="RestaurantId" ColumnName="RestaurantId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Restaurants">
             <EntityTypeMapping TypeName="ITMAppDBModel.Restaurant">
               <MappingFragment StoreEntitySet="Restaurant">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="ITMAppDBModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="Lunch_Employee" TypeName="ITMAppDBModel.Lunch_Employee" StoreEntitySet="Lunch_Employee">
-            <EndProperty Name="Employee">
-              <ScalarProperty Name="Id" ColumnName="EmployeeId" />
-            </EndProperty>
             <EndProperty Name="Lunch">
               <ScalarProperty Name="Id" ColumnName="LunchId" />
+            </EndProperty>
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="Id" ColumnName="EmployeeId" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
