@@ -21,9 +21,9 @@ namespace BusinessLogic.DataHandler
             return lunchRepo.Get(id).ToContract();
         }
 
-        public bool Post(LunchModel lunch)
+        public bool Post(LunchModel lunch, EmployeeModel employee)
         {
-            return lunch != null && lunchRepo.Post(lunch.ToDataBaseEntity());
+            return lunch != null && lunchRepo.Post(lunch.ToDataBaseEntity(), employee.ToDataBaseEntity());
         }
 
         public bool Update(int id)

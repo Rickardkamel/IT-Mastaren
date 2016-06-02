@@ -101,8 +101,9 @@
                 return response.data;
             })
         }
-        function postLunch(data){
-            return $http.post(baseAdress + 'api/lunch', data).then(function(data){
+        function postLunch(data1, data2){
+            var inData = {'lunch': data1, 'employee': data2}
+            return $http.post(baseAdress + 'api/lunch', inData).then(function(data){
                 return data;
             })
         }

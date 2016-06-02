@@ -2,7 +2,7 @@
     <ion-nav-buttons side="right">
         <a style="color: #F6A01C;" class="button button-clear icon-left ion-plus" ng-click=""></a>
     </ion-nav-buttons>
-    <ion-content scroll="false" on-finish-render="ngRepeatFinished">
+    <ion-content scroll="false">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" ng-repeat="lunch in vm.lunchList.data" style="background-image:url(images/{{lunch.Restaurant.ImagePath}})">

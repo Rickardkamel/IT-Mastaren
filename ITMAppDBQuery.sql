@@ -100,12 +100,12 @@ VALUES	('1', '2016-05-24 18:00', 0),
 CREATE TABLE Lunch_Employee
 (
 	EmployeeId INT FOREIGN KEY REFERENCES Employee(Id) NOT NULL,
-	LunchId INT FOREIGN KEY REFERENCES Lunch(Id) NOT NULL
+	LunchId INT FOREIGN KEY REFERENCES Lunch(Id) NOT NULL,
 )
 
-ALTER TABLE Lunch_Employee
-ADD CONSTRAINT PK_LunEmp
-PRIMARY KEY (EmployeeId, LunchId)
+--ALTER TABLE Lunch_Employee
+--ADD CONSTRAINT PK_LunEmp
+--PRIMARY KEY (EmployeeId, LunchId)
 
 INSERT INTO Lunch_Employee (EmployeeId, LunchId)
 VALUES	(1 , 1), 
@@ -143,3 +143,8 @@ JOIN Employee
 ON Lunch_Employee.EmployeeId = Employee.Id
 JOIN Lunch 
 ON  Lunch_Employee.LunchId = Lunch.Id
+
+SELECT Employee.Name
+FROM Lunch_Employee
+JOIN Employee
+ON Lunch_Employee.EmployeeId = Employee.Id

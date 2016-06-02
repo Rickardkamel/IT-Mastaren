@@ -2,6 +2,7 @@
 using System.Web.Http;
 using BusinessLogic.DataHandler;
 using Contracts;
+using Newtonsoft.Json.Linq;
 
 namespace ITMApp_WebAPI.Controllers
 {
@@ -23,12 +24,14 @@ namespace ITMApp_WebAPI.Controllers
             return Ok(lunch);
         }
 
-        public IHttpActionResult Post(LunchModel lunch)
+        public IHttpActionResult Post(JObject data)
         {
-            lunch.LunchTime = lunch.LunchTime.ToLocalTime();
+            var employee = data["employee"].ToObject<EmployeeModel>();
+            var lunch = data["lunch"].ToObject<LunchModel>();
+            //lunch.LunchTime = lunch.LunchTime.ToLocalTime();
             if (!ModelState.IsValid) return BadRequest();
 
-            if (!_lunchHandler.Post(lunch)) return BadRequest("Incorrect Datainput");
+            if (!_lunchHandler.Post(lunch, employee)) return BadRequest("Incorrect Datainput");
 
             return Ok();
         }
