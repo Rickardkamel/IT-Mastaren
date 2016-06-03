@@ -26,8 +26,8 @@ namespace ITMApp_WebAPI.Controllers
 
         public IHttpActionResult Post(JObject data)
         {
-            var employee = data["employee"].ToObject<EmployeeModel>();
-            var lunch = data["lunch"].ToObject<LunchModel>();
+            var employee = data["employee"]?.ToObject<EmployeeModel>();
+            var lunch = data["lunch"]?.ToObject<LunchModel>();
             //lunch.LunchTime = lunch.LunchTime.ToLocalTime();
             if (!ModelState.IsValid) return BadRequest();
 
