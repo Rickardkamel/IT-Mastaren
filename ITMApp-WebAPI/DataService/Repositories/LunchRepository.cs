@@ -22,9 +22,16 @@ namespace DataService.Repositories
 
         public bool Post(Lunch lunch, Employee employee)
         {
+            var dbEmployee = _context.Employees.FirstOrDefault(x => x.Id == employee.Id);
+
+            if (lunch.Id == 0)
+            {
+                lunch.Employees = new List<Employee> {dbEmployee};
+                _context.Lunches.AddOrUpdate(lunch);
+                _context.SaveChanges();
+            }
 
             var dbLunch = _context.Lunches?.FirstOrDefault(x => x.Id == lunch.Id);
-            var dbEmployee = _context.Employees.FirstOrDefault(x => x.Id == employee.Id);
 
             if (dbLunch != null && !dbLunch.Employees.Contains(dbEmployee))
             {
@@ -33,7 +40,7 @@ namespace DataService.Repositories
 
             try
             {
-                _context.Lunches.AddOrUpdate(lunch);
+                _context.Lunches.AddOrUpdate(dbLunch);
 
                 _context.SaveChanges();
                 return true;

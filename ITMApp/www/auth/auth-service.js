@@ -30,7 +30,7 @@
                 setCookie(response);
                 function setCookie(response) {
                     var d = new Date();
-                    d.setTime(d.getTime() + (1000));
+                    d.setTime(d.getTime() + (999999));
                     var expires = 'expires=' + d.toUTCString();
                     var userInfo = {
                         userName: response.userName,

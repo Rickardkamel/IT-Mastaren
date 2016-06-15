@@ -22,7 +22,8 @@
             getRestaurants: getRestaurants,
             getLunches: getLunches,
             postLunch: postLunch,
-            getLunch: getLunch
+            getLunch: getLunch,
+            deleteLunch: deleteLunch,
         };
 
         var baseAdress = 'http://localhost:58054/';
@@ -115,6 +116,11 @@
         function getLunch(id) {
             return $http.get(baseAdress + 'api/lunch/' + id).then(function(response) {
                 return response.data;
+            });
+        }
+        function deleteLunch(id){
+            return $http.delete(baseAdress + 'api/lunch/'+ id).success(function (response){
+                return response;
             });
         }
     }

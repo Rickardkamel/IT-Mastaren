@@ -29,33 +29,56 @@ ion-option-button.button-orange {
     color: #444444; 
 }
 
-.upper-box{
-    background-color: #444444;
-    text-align: center;
-    margin-top: -28px;
-    height: 40px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px; 
-     
-}.upper-box h4{
-    color: #F6A01C;    
-}.upper-box h5{
-    margin-top: -7px;
-    color: #F6A01C;
-}
-
 .box-template {
     background-color: #444444;
     color: #F6A01C;
     text-align: center;
     width: 50%;
-    min-height: 150px;
+    /*min-height: 150px;*/
     margin: 0 auto;
-    margin-top: 50%;
+    /*margin-top: 50%;*/
     border-radius: 30px;
-    opacity: 0.9;    
+    opacity: 0.9;      
     
-    
+}
+
+.show-image{
+    width: 100%;
+}
+
+.upper-box{
+     background-color: #444444;
+    color: #F6A01C;
+    text-align: center;
+    margin-top: -16px;
+    margin-left: 40px;;
+    height: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; 
+    padding-top: 10px;
+        
+}.upper-box h3{
+    color: #F6A01C;    
+    border-bottom: #F6A01C;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}.upper-box h5{
+    margin-top: -7px;
+    color: #F6A01C;
+}
+
+.itm-black {
+        color:#444444;
+}
+
+.itm-orange {
+        color: #F6A01C!important;
+}
+
+.padding-button-top {
+    margin-top: 100px;
 }
 
 .bottom-button {
@@ -98,3 +121,17 @@ ion-option-button.button-orange {
   min-height: 240px !important;
   width: 60% !important;
 }*/
+
+
+.slider {
+  height: 600px;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}

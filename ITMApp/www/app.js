@@ -61,7 +61,7 @@ angular.module('starter', [
                 views: {
                     'tab-settings': {
                         templateUrl: 'settings/settings.html',
-                        controller: 'SettingsController as vm'
+                        controller: 'SettingsController as vm',
                     }
                 }
             })
@@ -81,7 +81,7 @@ angular.module('starter', [
                 views: {
                     'tab-absence': {
                         templateUrl: 'employee-absence/employeeAbsence.html',
-                        controller: ''
+                        controller: 'newEmpAbsCtrl as vm'
                     }
                 }
             })

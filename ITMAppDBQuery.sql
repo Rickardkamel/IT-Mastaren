@@ -108,7 +108,11 @@ CREATE TABLE Lunch_Employee
 --PRIMARY KEY (EmployeeId, LunchId)
 
 INSERT INTO Lunch_Employee (EmployeeId, LunchId)
-VALUES	(1 , 1), 
+VALUES	(1 , 1),
+		(2 , 1),
+		(3 , 1),
+		(4 , 1),
+		(5 , 1), 
 		(2 , 2),
 		(3 , 3), 
 		(4 , 4),
