@@ -2,7 +2,7 @@
     <ion-nav-buttons side="right">
         <a style="color: #F6A01C;" class="button button-clear icon-left ion-plus" ng-click="vm.showModal()"></a>
     </ion-nav-buttons>
-    <ion-content scroll="false">
+    <ion-content>
         <ion-list>
 
             <ion-item id="wrapper" ng-repeat="lunch in vm.lunchList.data | filter:{Removed:false}">
@@ -39,7 +39,7 @@
             </label>
 
         </div>
-            <div class="input-label"> Tid:  <input type="time" width="10px"/></div>
+            <div class="input-label"> Tid:  <input type="datetime-local" width="10px"/></div>
         
     </ion-content>
   </ion-modal-view>

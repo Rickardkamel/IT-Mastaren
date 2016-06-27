@@ -29,6 +29,7 @@ namespace ITMApp_WebAPI.Controllers
             var employee = data["employee"]?.ToObject<EmployeeModel>();
             var lunch = data["lunch"]?.ToObject<LunchModel>();
             //lunch.LunchTime = lunch.LunchTime.ToLocalTime();
+            if (lunch?.Restaurant == null) return BadRequest();
             if (!ModelState.IsValid) return BadRequest();
 
             if (!_lunchHandler.Post(lunch, employee)) return BadRequest("Incorrect Datainput");

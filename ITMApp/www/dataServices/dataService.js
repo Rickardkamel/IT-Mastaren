@@ -4,7 +4,6 @@
     angular
         .module('starter')
         .factory('dataservice', dataservice);
-
     dataservice.$inject = ['$http'];
     function dataservice($http) {
         var result;
@@ -24,6 +23,8 @@
             postLunch: postLunch,
             getLunch: getLunch,
             deleteLunch: deleteLunch,
+            updateLunch: updateLunch,
+            
         };
 
         var baseAdress = 'http://localhost:58054/';
@@ -35,8 +36,6 @@
             };
 
         return services;
-
-
 
         ////////////////
         // EmployeeAbsence
@@ -103,6 +102,12 @@
             })
         }
         function postLunch(data1, data2){
+            var inData = {'lunch': data1, 'employee': data2}
+            return $http.post(baseAdress + 'api/lunch', inData).success(function(response){
+                return response;
+            })
+        }
+        function updateLunch(data1, data2){
             var inData = {'lunch': data1, 'employee': data2}
             return $http.post(baseAdress + 'api/lunch', inData).success(function(response){
                 return response;

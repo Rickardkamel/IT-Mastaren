@@ -27,6 +27,10 @@ namespace DataService.Repositories
         public bool Post(Employee employee)
         {
             if (employee == null) return false;
+            if (_context.Employees.Any(x => x.UserName.ToLower() == employee.UserName.ToLower()))
+            {
+                return true;
+            }
 
             _context.Employees.AddOrUpdate(employee);
 

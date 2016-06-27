@@ -11,7 +11,7 @@ namespace DataService.Repositories
         public List<Lunch> GetAll()
         {
             //var nowPlusOne = DateTime.Now.AddHours(1);
-            return _context.Lunches.Where(x => x.Removed == false).ToList();
+            return _context.Lunches.Where(x => x.Removed == false && x.LunchTime > DateTime.Now).ToList();
             //&& (x.LunchTime < nowPlusOne)
         }
 
@@ -29,14 +29,20 @@ namespace DataService.Repositories
                 lunch.Employees = new List<Employee> {dbEmployee};
                 _context.Lunches.AddOrUpdate(lunch);
                 _context.SaveChanges();
+                return true;
             }
 
             var dbLunch = _context.Lunches?.FirstOrDefault(x => x.Id == lunch.Id);
 
-            if (dbLunch != null && !dbLunch.Employees.Contains(dbEmployee))
+            if (dbLunch != null && dbLunch.Employees.Contains(dbEmployee))
+            {
+                dbLunch.Employees.Remove(dbEmployee);
+            }else if (dbLunch != null && !dbLunch.Employees.Contains(dbEmployee))
             {
                 dbLunch.Employees.Add(dbEmployee);
             }
+            
+
 
             try
             {

@@ -14,7 +14,8 @@
                                     <div ng-repeat="employee in lunch.EmployeesList">
                                         {{employee.Name}}
                                     </div>
-                                    <button ng-click="vm.joinLunch(lunch)" class="button button-block button-energized"><strong class="itm-black">JAG VILL MED</strong></button>
+                                    <button ng-hide="vm.showButton(lunch.EmployeesList)" ng-click="vm.joinLunch(lunch)" class="button button-block button-energized"><strong class="itm-black">GÅ MED</strong></button>
+                                    <button ng-hide="!vm.showButton(lunch.EmployeesList)" ng-click="vm.leaveLunch(lunch)" class="button button-block button-assertive"><strong class="itm-black">GÅ UR</strong></button>
                                 </div>
                             </div>
                         </div>
@@ -24,14 +25,46 @@
                             <strong ng-show="!vm.dateCheck(lunch.LunchTime)">{{lunch.LunchTime | date:'M/d HH:mm':CET}}</strong>
                         </div>
                         <div class="col col-40">Antal Deltagare: <strong>{{(lunch.EmployeesList | filter:search:strict).length}}</strong></div>
-                        <ion-option-button class="button-positive icon ion-edit" ng-click=""></ion-option-button>
                         <ion-option-button style="color: #fff" class="button-assertive icon ion-trash-a" ng-click="vm.removeLunch($index)"></ion-option-button>
                     </div>
                 </div>
             </ion-item>
         </ion-list>
+        <toaster-container toaster-options="{'toaster-id': 1, 'position-class': 'toast-top-full-width'}"></toaster-container>
+        <toaster-container toaster-options="{'toaster-id': 2, 'position-class': 'toast-top-full-width'}"></toaster-container>
+        <toaster-container toaster-options="{'toaster-id': 3, 'position-class': 'toast-top-full-width'}"></toaster-container>
+        <toaster-container toaster-options="{'toaster-id': 4, 'position-class': 'toast-top-full-width'}"></toaster-container>
     </ion-content>
 </ion-view>
+
+<script id="newlunch-modal.html" type="text/ng-template">
+    <ion-modal-view ng-model="vm.value">
+        <ion-header-bar class="bar bar-header bar-dark">
+            <ion-button style="color: #F6A01C" class="button icon-left ion-chevron-left button-clear" ng-click="vm.closeModal()"></ion-button>
+            <h1 class="title">Lägg till en lunch</h1>
+        </ion-header-bar>
+        <ion-content class="has-header">
+            <form name="form" ng-model="form">
+                <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">Restaurang: 
+                        </div>
+                        <select style="width: 100%;" name="restaurant" id="restaurant" ng-model="vm.restaurant"  ng-options="restaurant.Name for restaurant in vm.restaurantData | orderBy:'Name ' track by     restaurant.Id">
+                        </select>
+                    </label>
+                </div>
+                <div class="input-label">Tid: <input required name="time" id="time" ng-model="vm.lunchDate" type="datetime-local" /></div>
+                <div class="padding-button-top">
+                    <ion-button ng-init="saveEmpty(form)" class="itm-orange button button-dark button-block" ng-click="vm.createLunch(form)">
+                        Lägg Till
+                    </ion-button>
+                </div>
+                        <toaster-container toaster-options="{'position-class': 'toast-top-full-width'}"></toaster-container>        
+            </form>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
 
 
 <!--  <div class="swiper-container" swiper>
@@ -51,38 +84,6 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>-->
-
-
-
-
-<script id="newlunch-modal.html" type="text/ng-template">
-    <ion-modal-view ng-model="vm.value">
-        <ion-header-bar class="bar bar-header bar-dark">
-            <ion-button style="color: #F6A01C" class="button icon-left ion-chevron-left button-clear" ng-click="vm.closeModal()"></ion-button>
-            <h1 class="title"
-                '>Lägg till en lunch</h1>
-        </ion-header-bar>
-        <ion-content class="has-header">
-            <form name="form" ng-model="form">
-                <div class="list">
-                    <label class="item item-input item-select">
-                        <div class="input-label">Restaurang: 
-                        </div>
-                        <select style="width: 100%;" name="restaurant" id="restaurant" ng-model="vm.restaurant"  ng-options="restaurant.Name for restaurant in vm.restaurantData | orderBy:'Name ' track by     restaurant.Id">
-                        </select>
-                    </label>
-                </div>
-                <div class="input-label"> Klockslag: <input name="time" id="time" ng-model="vm.time" type="time" width="10px" /></div>
-                <div class="padding-button-top">
-                    <ion-button ng-init="saveEmpty(form)" class="itm-orange button button-dark button-block" ng-click="vm.createLunch(form)">
-                        Lägg Till
-                    </ion-button>
-                </div>
-            </form>
-        </ion-content>
-    </ion-modal-view>
-</script>
-
 
 
 
