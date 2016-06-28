@@ -3,8 +3,8 @@
 
     angular.module('starter.lunch')
         .controller('LunchController', LunchController);
-    LunchController.$inject = ['$scope', '$ionicModal', 'dataservice', '$ionicSlideBoxDelegate', 'toaster'];
-    function LunchController($scope, $ionicModal, dataservice, $ionicSlideBoxDelegate, toaster) {
+    LunchController.$inject = ['$scope', '$ionicModal', 'dataservice', '$ionicSlideBoxDelegate', 'toaster', '$timeout'];
+    function LunchController($scope, $ionicModal, dataservice, $ionicSlideBoxDelegate, toaster, $timeout) {
         var vm = this;
         getLunches();
 
@@ -24,9 +24,7 @@
             for (var i = 0; i < employeeList.length; i++) {
                 if (employeeList[i].Name == vm.loggedIn.data.Name) {
                     return true;
-                } else {
-                    return false;
-                }
+                } 
             }
         }
 
@@ -119,6 +117,7 @@
                     dataservice.getLunches().then(function (data) {
                         vm.lunchList.data = data;
                     })
+
                     toaster.pop({
                         toasterId: 2,
                         type: 'success',

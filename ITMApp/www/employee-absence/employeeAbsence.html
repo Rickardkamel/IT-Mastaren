@@ -16,8 +16,8 @@
                         <h3 class="col col-50">{{empAbs.Employee.Name}}</h3>
                         <h3 class="col col-40">{{empAbs.Absence.Name}}</h3>
                         <h3 class="col col-40">{{empAbs.EndDate|date:"yyyy/dd/MM"}}</h3>
-                        <ion-option-button class="button-positive icon ion-edit" ng-click="vm.showEditAbsence(empAbs)"></ion-option-button>
-                        <ion-option-button style="color: #fff" class="button-assertive icon ion-trash-a" ng-click="vm.removeItem($index)"></ion-option-button>
+                        <ion-option-button ng-show="vm.isOwner(empAbs.Employee)" class="button-positive icon ion-edit" ng-click="vm.showEditAbsence(empAbs)"></ion-option-button>
+                        <ion-option-button ng-show="vm.isOwner(empAbs.Employee)" style="color: #fff" class="button-assertive icon ion-trash-a" ng-click="vm.removeItem($index)"></ion-option-button>
                     </div>
                 </ion-item>
             </ion-list>

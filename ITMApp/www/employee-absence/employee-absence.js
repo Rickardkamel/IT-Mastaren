@@ -21,6 +21,26 @@ angular.module('starter.newEmpAbs')
 
         };
 
+        var userName = getCookie(document.cookie.replace(/(?:(?:^|.*;\s*)userObject\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
+
+            function getCookie(userObject) {
+                var parsedCookie = JSON.parse(userObject);
+                return parsedCookie.userName;
+            };
+
+        vm.logged = dataservice.getLoggedInUser(userName).then(function (response) {
+                vm.logged.data = response;
+            })
+
+        vm.isOwner = function (user) {
+
+            var loggedInUserId = vm.logged.data.Id;
+            if (user.Id == loggedInUserId) {
+                return true;
+            } else if (user.Id !== loggedInUserId) {
+                return false;
+            }
+        }
         vm.leaveAddChangeDialog = function () {
             // Remove dialog 
             vm.addDialog.remove();
@@ -159,7 +179,7 @@ angular.module('starter.newEmpAbs')
         vm.editAbsence = function (form) {
             var rememberId = vm.tmpEditAbsence;
 
-             var userName = getCookie(document.cookie.replace(/(?:(?:^|.*;\s*)userObject\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
+            var userName = getCookie(document.cookie.replace(/(?:(?:^|.*;\s*)userObject\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
 
             function getCookie(userObject) {
                 var parsedCookie = JSON.parse(userObject);

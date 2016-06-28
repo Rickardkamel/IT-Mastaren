@@ -135,3 +135,28 @@ ion-option-button.button-orange {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
 }
+
+.center-login {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    height: 30%;
+    width: 100%;
+} .center-login-logo{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    margin-top: -30px;
+    height: 50%;
+    width: auto;
+    opacity: 0.6
+}
