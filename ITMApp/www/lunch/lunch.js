@@ -24,8 +24,16 @@
             for (var i = 0; i < employeeList.length; i++) {
                 if (employeeList[i].Name == vm.loggedIn.data.Name) {
                     return true;
-                } 
+                }
             }
+        }
+
+        vm.doRefresh = function () {
+            dataservice.getLunches().then(function (newItems) {
+                // Stop the ion-refresher from spinning
+                vm.lunchList.data = newItems;
+                $scope.$broadcast('scroll.refreshComplete');
+            });
         }
 
         // Modal-Instance
@@ -178,7 +186,7 @@
                     timeout: 2000
                 })
             })
-                vm.lunchList.data.push();   
+            vm.lunchList.data.push();
         }
 
         vm.removeLunch = function (index) {

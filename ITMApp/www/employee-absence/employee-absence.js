@@ -21,6 +21,14 @@ angular.module('starter.newEmpAbs')
 
         };
 
+        vm.doRefresh = function () {
+            dataservice.getEmployeeAbsences().then(function (newItems) {
+                // Stop the ion-refresher from spinning
+                vm.list.data = newItems;
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        }
+
         var userName = getCookie(document.cookie.replace(/(?:(?:^|.*;\s*)userObject\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
 
             function getCookie(userObject) {
