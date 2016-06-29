@@ -1,0 +1,10 @@
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\DataService.dll.config
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\DataService.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\DataService.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\EntityFramework.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\EntityFramework.xml
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Release\DataService.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Release\DataService.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\DataService\obj\Release\DataService.pdb

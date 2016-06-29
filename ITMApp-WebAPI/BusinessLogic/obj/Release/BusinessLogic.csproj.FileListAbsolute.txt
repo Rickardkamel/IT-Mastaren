@@ -1,0 +1,14 @@
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\BusinessLogic.dll.config
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\BusinessLogic.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\BusinessLogic.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\Contracts.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\DataService.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\Mappers.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\EntityFramework.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\Contracts.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\DataService.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\Mappers.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\bin\Release\EntityFramework.xml
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\obj\Release\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\obj\Release\BusinessLogic.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\BusinessLogic\obj\Release\BusinessLogic.pdb

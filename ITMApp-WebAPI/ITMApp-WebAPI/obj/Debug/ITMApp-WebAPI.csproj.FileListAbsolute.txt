@@ -365,3 +365,5 @@ C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren
 C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.dll
 C:\Users\rickam\Desktop\Dev_All\Branches\Dev_Rickard_Lab\In Progress\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\obj\Debug\ITMApp-WebAPI.pdb
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\Microsoft.Owin.Cors.dll
+C:\Users\rickam\Desktop\IT-Mastaren\ITMApp-WebAPI\ITMApp-WebAPI\bin\Microsoft.Owin.Cors.xml

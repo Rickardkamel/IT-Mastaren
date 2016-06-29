@@ -8,7 +8,9 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <UseIISExpress>true</UseIISExpress>
-    <NameOfLastUsedPublishProfile>NyTest</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>DeployAPI</NameOfLastUsedPublishProfile>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

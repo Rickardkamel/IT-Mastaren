@@ -138,14 +138,14 @@ ion-option-button.button-orange {
 
 .center-login {
     position: absolute;
-    top:0;
+    top:80%;
     bottom: 0;
     left: 0;
     right: 0;
 
     margin: auto;
 
-    height: 30%;
+    height: 100%;
     width: 100%;
 } .center-login-logo{
     position: absolute;

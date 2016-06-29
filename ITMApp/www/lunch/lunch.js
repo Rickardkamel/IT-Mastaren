@@ -196,6 +196,7 @@
             })
         }
 
+
         vm.showDetails = function (index) {
             $("#members" + index).slideToggle(800);
         }
