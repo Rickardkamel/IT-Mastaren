@@ -23,7 +23,6 @@
             } else {
                 if ($location.path() !== '/login'); {
                     $location.path('/login');
-                    window.location.reload();
                 }
             }
             return config;

@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\inetpub\wwwroot\WebAPI</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\rickam\Desktop\WebAPIDone</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -76,7 +76,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2016 14:37:15</publishTime>
     </File>
     <File Include="bin/BusinessLogic.dll">
-      <publishTime>06/28/2016 09:50:53</publishTime>
+      <publishTime>07/05/2016 15:05:38</publishTime>
     </File>
     <File Include="bin/Contracts.dll">
       <publishTime>06/28/2016 09:50:52</publishTime>
@@ -85,7 +85,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2016 14:37:15</publishTime>
     </File>
     <File Include="bin/DataService.dll">
-      <publishTime>06/28/2016 09:50:52</publishTime>
+      <publishTime>07/05/2016 15:05:38</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/27/2016 14:37:16</publishTime>
@@ -94,10 +94,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2016 14:37:16</publishTime>
     </File>
     <File Include="bin/ITMApp-WebAPI.dll">
-      <publishTime>06/28/2016 13:40:31</publishTime>
+      <publishTime>07/05/2016 15:05:42</publishTime>
     </File>
     <File Include="bin/Mappers.dll">
-      <publishTime>06/28/2016 09:50:53</publishTime>
+      <publishTime>07/05/2016 15:05:38</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>05/27/2016 14:37:16</publishTime>

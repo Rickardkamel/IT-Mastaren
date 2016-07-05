@@ -1,7 +1,5 @@
 ﻿using System.Net.Http.Headers;
 using System.Web.Http;
-using System.Web.Http.Cors;
-using Microsoft.Owin.Security.OAuth;
 using Owin;
 
 namespace ITMApp_WebAPI
@@ -31,7 +29,7 @@ namespace ITMApp_WebAPI
 
             app.UseWebApi(config);
 
-            //config.Filters.Add(new AuthorizeAttribute());
+            config.Filters.Add(new AuthorizeAttribute());
 
         }
     }

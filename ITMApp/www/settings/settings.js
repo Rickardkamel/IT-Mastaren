@@ -5,8 +5,8 @@
         .module('starter.settings')
         .controller('SettingsController', SettingsController);
 
-    SettingsController.$inject = ['$state'];
-    function SettingsController($state) {
+    SettingsController.$inject = ['$q', '$state'];
+    function SettingsController($q, $state) {
         var vm = this;
 
         vm.logout = logout;
@@ -18,8 +18,8 @@
         function logout() {
             var deferred = $q.defer();
 
-            localstorageFactory.remove('user');
-            $state.go('layout.login');
+            window.localStorage.removeItem('token');
+            $state.go('login');
             deferred.resolve();
 
             return deferred.promise;
