@@ -232,7 +232,7 @@ angular.module('starter.newEmpAbs')
                         type: 'error',
                         title: 'Fel!',
                         body: 'Tillbaka-datumet är tidigare än Start-datumet',
-                        timeout: 3000
+                        timeout: 2000
                     })
                 }
             })

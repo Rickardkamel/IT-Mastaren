@@ -28,7 +28,7 @@
                         type: 'info',
                         title: 'Fel!',
                         body: 'Fel vid anslutningen',
-                        timeout: 3000
+                        timeout: 2000
                     });
                     return;
                 }
@@ -38,7 +38,7 @@
                     type: 'error',
                     title: 'Fel!',
                     body: 'Fel användarnamn/lösenord',
-                    timeout: 3000
+                    timeout: 2000
                 })
             });
         };

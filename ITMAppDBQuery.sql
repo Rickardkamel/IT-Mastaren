@@ -31,12 +31,12 @@ CREATE TABLE Employee
 	Email NVARCHAR(200) NOT NULL UNIQUE
 )
 
-INSERT INTO Employee (UserName, Name, Email)
-VALUES	('petpan', 'Peter Pan', 'Peter.Pan@itmastaren.se'),
-		('snövit', 'Snö Vit', 'Snö.Vit@itmastaren.se'),
-		('tinlin', 'Tinge Ling', 'Tinge.Ling@itmastaren.se'),
-		('kapkro', 'Kapten Krok', 'Kapten.Krok@itmastaren.se'),
-		('johbra', 'Johnny Bravo', 'Johnny.Bravo@itmastaren.se')
+--INSERT INTO Employee (UserName, Name, Email)
+--VALUES	('petpan', 'Peter Pan', 'Peter.Pan@itmastaren.se'),
+--		('snövit', 'Snö Vit', 'Snö.Vit@itmastaren.se'),
+--		('tinlin', 'Tinge Ling', 'Tinge.Ling@itmastaren.se'),
+--		('kapkro', 'Kapten Krok', 'Kapten.Krok@itmastaren.se'),
+--		('johbra', 'Johnny Bravo', 'Johnny.Bravo@itmastaren.se')
 
 CREATE TABLE Employee_Absence
 (
@@ -47,6 +47,14 @@ CREATE TABLE Employee_Absence
 	EndDate DATE,
 	Removed BIT NOT NULL,
 )
+
+--INSERT INTO Employee_Absence (EmployeeId, AbsenceId, StartDate, Removed)
+--VALUES	(1, 1, '2016-08-24', 0),
+--		(2, 1, '2016-08-24', 0),
+--		(3, 2, '2016-08-24', 0),
+--		(4, 3, '2016-08-24', 0),
+--		(5, 4, '2016-08-24', 0),
+--		(6, 2, '2016-08-24', 0)
 
 CREATE TABLE Restaurant
 (
@@ -90,12 +98,12 @@ CREATE TABLE Lunch
 	Removed BIT NOT NULL
 )
 
-INSERT INTO Lunch (RestaurantId, LunchTime, Removed)
-VALUES	('1', '2016-05-24 18:00', 0),
-		('2', '2016-05-24 18:00', 0),
-		('3', '2016-05-24 18:00', 0),
-		('4', '2016-05-24 18:00', 0),
-		('5', '2016-05-24 18:00', 0)
+--INSERT INTO Lunch (RestaurantId, LunchTime, Removed)
+--VALUES	('1', '2016-08-24 18:00', 0),
+--		('2', '2016-08-24 18:00', 0),
+--		('3', '2016-08-24 18:00', 0),
+--		('4', '2016-08-24 18:00', 0),
+--		('5', '2016-08-24 18:00', 0)
 
 CREATE TABLE Lunch_Employee
 (
@@ -107,16 +115,16 @@ CREATE TABLE Lunch_Employee
 --ADD CONSTRAINT PK_LunEmp
 --PRIMARY KEY (EmployeeId, LunchId)
 
-INSERT INTO Lunch_Employee (EmployeeId, LunchId)
-VALUES	(1 , 1),
-		(2 , 1),
-		(3 , 1),
-		(4 , 1),
-		(5 , 1), 
-		(2 , 2),
-		(3 , 3), 
-		(4 , 4),
-		(5 , 5)
+--INSERT INTO Lunch_Employee (EmployeeId, LunchId)
+--VALUES	(1 , 1),
+--		(2 , 1),
+--		(3 , 1),
+--		(4 , 1),
+--		(5 , 1), 
+--		(2 , 2),
+--		(3 , 3), 
+--		(4 , 4),
+--		(5 , 5)
 
 
 
@@ -152,3 +160,7 @@ SELECT Employee.Name
 FROM Lunch_Employee
 JOIN Employee
 ON Lunch_Employee.EmployeeId = Employee.Id
+
+
+--INSERT INTO Employee (UserName, Name, Email)
+--VALUES	('petpin', 'Peter pin', 'Peter.pin@itmastaren.se')

@@ -21,8 +21,8 @@
         }
 
         vm.showButton = function (employeeList) {
-            for (var i = 0; i < employeeList.length; i++) {
-                if (employeeList[i].Name == vm.loggedIn.data.Name) {
+            for (var i = 0; i <= employeeList.length; i++) {
+                if (employeeList.length != 0 && employeeList[i].Name == vm.loggedIn.data.Name) {
                     return true;
                 }
             }
@@ -131,7 +131,7 @@
                         type: 'success',
                         title: 'Gått med!',
                         body: 'Du har nu gått med i ' + vm.getThisLunch.data.Restaurant.Name + ' lunchen!',
-                        timeout: 3000
+                        timeout: 2000
                     });
                 })
             })
@@ -151,7 +151,7 @@
                         type: 'warning',
                         title: 'Lämnat!',
                         body: 'Du har nu lämnat ' + vm.getThisLunch.data.Restaurant.Name + ' lunchen!',
-                        timeout: 3000
+                        timeout: 2000
                     });
                 })
             })
@@ -175,7 +175,7 @@
                     type: 'info',
                     title: 'Skapad!',
                     body: 'Lunchen ' + newLunch.restaurant.Name + ' har nu skapats!',
-                    timeout: 3000
+                    timeout: 2000
                 });
 
             }).error(function (response) {
