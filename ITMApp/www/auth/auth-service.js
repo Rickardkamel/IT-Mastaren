@@ -40,7 +40,6 @@
                     document.cookie = "userObject =" + JSON.stringify(userInfo);
                 };                                          
 
-                $location.path('/tab/absence');
                 
                 deferred.resolve(response);
             }).error(function (err, status) {

@@ -48,7 +48,7 @@ namespace ITMApp_WebAPI
                 {
                     AllowInsecureHttp = true,
                     TokenEndpointPath = new PathString("/token"),
-                    AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                    AccessTokenExpireTimeSpan = TimeSpan.FromDays(365),
                     Provider = new ApplicationOAuthProvider(),
                 };
 
