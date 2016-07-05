@@ -21,8 +21,8 @@
             if(authData) {
                 config.headers.Authorization = 'Bearer ' + authData.token; 
             } else {
-                if ($location.path() !== '/tab/login'); {
-                    $location.pat('/tab/login');
+                if ($location.path() !== '/login'); {
+                    $location.path('/login');
                     window.location.reload();
                 }
             }

@@ -11,9 +11,18 @@
 
         vm.logout = logout;
 
+        // function logout() {
+        //     window.localStorage.removeItem('token');
+        //     $state.go('login');
+        // }
         function logout() {
-            window.localStorage.removeItem('token');
-            $state.go('login');
+            var deferred = $q.defer();
+
+            localstorageFactory.remove('user');
+            $state.go('layout.login');
+            deferred.resolve();
+
+            return deferred.promise;
         }
 
     }

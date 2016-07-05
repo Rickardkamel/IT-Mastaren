@@ -10,7 +10,8 @@
 
         var serviceBase = 'http://localhost:58054/'
         var services = {
-            login: login
+            login: login,
+            checkLoggedInStatus: checkLoggedInStatus
         };
         
         document.cookie
@@ -47,6 +48,15 @@
             });
 
             return deferred.promise;
+        }
+
+        function checkLoggedInStatus() {
+            if (window.localStorage.getItem('token') === null) {
+                return false;
+            }
+            else {
+                return true;
+            }
         }
     }
 })();

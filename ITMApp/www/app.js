@@ -8,19 +8,19 @@ angular.module('starter', [
     'toaster',
     'ngAnimate',
     'starter.newEmpAbs',
-    'starter.auth',    
+    'starter.auth',
     'starter.login',
     'starter.tabs',
     'starter.settings',
     'starter.lunch',
     'directives.module',
-        
+
 ])
 
-    .run(function($ionicPlatform) {
-        $ionicPlatform.ready(function() {
+    .run(function ($rootScope , $ionicPlatform) {
+        $ionicPlatform.ready(function () {
             if (window.cordova && window.cordova.plugins.Keyboard) {
-                
+
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
                 cordova.plugins.Keyboard.disableScroll(true);
@@ -29,68 +29,90 @@ angular.module('starter', [
                 StatusBar.styleDefault();
             }
         });
+
+        $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+            if (error === "Not Authorized") {
+                $state.go("login");
+            }
+        });
     })
 
-    .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
 
-        $ionicConfigProvider.tabs.position('bottom');
-        
-        $stateProvider
-        
-            .state('tab', {
-                url: '/tab',
-                abstract: true,
-                templateUrl: 'tabs/tabs.html',                
-                controller: 'TabsController as vm'
-            })
+    .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+    var isLoggedIn = {
+        security: ['$q', 'authService', function ($q, authService) {
+            if (!authService.checkLoggedInStatus()) {
+                return $q.reject("Not Authorized");
+            }
+        }]
+    };
 
 
-            .state('tab.news', {
-                url: '/news',
-                views: {
-                    'tab-news': {
-                        templateUrl: 'news/news.html',
-                        controller: ''
-                    }
+
+    $ionicConfigProvider.tabs.position('bottom');
+
+    $stateProvider
+
+        .state('tab', {
+            url: '/',
+            abstract: true,
+            templateUrl: 'tabs/tabs.html',
+            controller: 'TabsController as vm',
+        })
+
+        .state('login', {
+            url: '/login',
+            templateUrl: 'login/login.html',
+            controller: 'LoginController as vm'
+        })
+
+        .state('tab.news', {
+            url: 'news',
+            views: {
+                'tab-news': {
+                    templateUrl: 'news/news.html',
+                    controller: '',
+                    resolve: isLoggedIn
                 }
-            })
+            }
+        })
 
-           .state('tab.settings', {
-                url: '/settings',
-                views: {
-                    'tab-settings': {
-                        templateUrl: 'settings/settings.html',
-                        controller: 'SettingsController as vm',
-                    }
+        .state('tab.settings', {
+            url: 'settings',
+            views: {
+                'tab-settings': {
+                    templateUrl: 'settings/settings.html',
+                    controller: 'SettingsController as vm',
+                    resolve: isLoggedIn
                 }
-            })
-            
-            .state('tab.lunch', {
-                url: '/lunch',
-                views: {
-                    'tab-lunch': {
-                        templateUrl: 'lunch/lunch.html',
-                        controller: 'LunchController as vm'
-                    }
-                }
-            })
+            }
+        })
 
-            .state('tab.absence', {
-                url: '/absence',
-                views: {
-                    'tab-absence': {
-                        templateUrl: 'employee-absence/employeeAbsence.html',
-                        controller: 'newEmpAbsCtrl as vm'
-                    }
+        .state('tab.lunch', {
+            url: 'tab/lunch',
+            views: {
+                'tab-lunch': {
+                    templateUrl: 'lunch/lunch.html',
+                    controller: 'LunchController as vm',
+                    resolve: isLoggedIn
                 }
-            })
+            }
+        })
 
-             .state('login', {
-                url: '/login',
-                templateUrl: 'login/login.html',
-                controller: 'LoginController as vm'
-            })
-        $urlRouterProvider.otherwise('/login');
-    });
+        .state('tab.absence', {
+            url: 'absence',
+            views: {
+                'tab-absence': {
+                    templateUrl: 'employee-absence/employeeAbsence.html',
+                    controller: 'newEmpAbsCtrl as vm',
+                    resolve: isLoggedIn
+                }
+            }
+        })
+
+
+    $urlRouterProvider.otherwise(window.localStorage.getItem('token')==null ? 'login' : 'tab/lunch');
+});
 

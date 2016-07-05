@@ -2,7 +2,7 @@
 <ion-tabs class="tabs-icon-top tabs-background-dark tabs-color-energized">
 
     <!-- Lunch Tab -->
-    <ion-tab icon="ion-android-restaurant" title="Lunch" href="#/tab/lunch" ng-if="vm.loggedIn">
+    <ion-tab icon="ion-android-restaurant" title="Lunch" href="lunch" ng-if="vm.loggedIn">
         <ion-nav-view name="tab-lunch">
             <ion-nav-bar class="bar-dark item-icon-left">
                 <ion-nav-title>
@@ -13,7 +13,7 @@
     </ion-tab>
 
     <!-- Absence tab -->
-    <ion-tab icon="ion-ios-person" title="Frånvaro" href="#/tab/absence" ng-if="vm.loggedIn">
+    <ion-tab icon="ion-ios-person" title="Frånvaro" href="absence" ng-if="vm.loggedIn">
         <ion-nav-view name="tab-absence">
             <ion-nav-bar class="bar-dark item-icon-left">
                 <ion-nav-title>
@@ -35,7 +35,7 @@
     </ion-tab>-->
 
     <!-- Settings Tab -->
-    <ion-tab icon="ion-gear-a" title="Inställningar" href="#/tab/settings" ng-if="vm.loggedIn">
+    <ion-tab icon="ion-gear-a" title="Inställningar" href="settings" ng-if="vm.loggedIn">
         <ion-nav-view name="tab-settings">
             <ion-nav-bar class="bar-dark item-icon-left">
                 <ion-nav-title>
