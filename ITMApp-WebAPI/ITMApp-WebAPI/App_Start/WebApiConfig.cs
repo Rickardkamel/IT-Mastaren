@@ -31,6 +31,8 @@ namespace ITMApp_WebAPI
 
             app.UseWebApi(config);
 
+            //config.Filters.Add(new AuthorizeAttribute());
+
         }
     }
 }

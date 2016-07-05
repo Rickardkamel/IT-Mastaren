@@ -5,6 +5,7 @@ using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
+    //[Authorize]
     public class EmployeeAbsenceController : ApiController
     {
         private EmployeeAbsenceHandler _employeeAbsenceHandler = new EmployeeAbsenceHandler();

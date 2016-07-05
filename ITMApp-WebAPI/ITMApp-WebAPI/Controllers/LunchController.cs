@@ -6,8 +6,10 @@ using Newtonsoft.Json.Linq;
 
 namespace ITMApp_WebAPI.Controllers
 {
+    //[Authorize]
     public class LunchController : ApiController
     {
+
         private LunchHandler _lunchHandler = new LunchHandler();
 
         public List<LunchModel> Get()

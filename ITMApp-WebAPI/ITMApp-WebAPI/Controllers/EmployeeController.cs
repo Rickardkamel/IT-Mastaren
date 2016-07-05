@@ -5,6 +5,7 @@ using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
+    //[Authorize]
     [RoutePrefix("api/employee")]
     public class EmployeeController : ApiController
     {

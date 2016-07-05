@@ -5,6 +5,7 @@ using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
+    //[Authorize]
     public class RestaurantController : ApiController
     {
         private RestaurantHandler _restaurantHandler = new RestaurantHandler();
