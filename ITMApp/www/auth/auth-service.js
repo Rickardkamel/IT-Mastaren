@@ -24,6 +24,8 @@
             var deferred = $q.defer();            
              
             $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+
+                
                 window.localStorage.setItem('token', angular.toJson({ token: response.access_token }));
                 
             

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Mvc;
 using BusinessLogic.DataHandler;
 using Contracts;
 using Newtonsoft.Json.Linq;
@@ -7,6 +8,7 @@ using Newtonsoft.Json.Linq;
 namespace ITMApp_WebAPI.Controllers
 {
     //[Authorize]
+    //[RequireHttps]
     public class LunchController : ApiController
     {
 

@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Mvc;
 using BusinessLogic.DataHandler;
 using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
     //[Authorize]
+    //[RequireHttps]
     public class EmployeeAbsenceController : ApiController
     {
         private EmployeeAbsenceHandler _employeeAbsenceHandler = new EmployeeAbsenceHandler();

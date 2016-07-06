@@ -5,7 +5,7 @@
         .module('starter.login')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$location','authService', '$http', 'dataservice', 'toaster'];
+    LoginController.$inject = ['$location', 'authService', '$http', 'dataservice', 'toaster'];
     function LoginController($location, authService, $http, dataservice, toaster) {
         var vm = this;
 
@@ -44,13 +44,14 @@
         };
 
         vm.createEmployee = function (response) {
+
             var newEmployee = {
                 Name: response.displayName,
                 UserName: response.userName,
                 Email: response.email
             }
             dataservice.postEmployee(newEmployee).then(function () {
-                                $location.path('/tab/lunch');
+                $location.path('/tab/lunch');
             });
         }
     }

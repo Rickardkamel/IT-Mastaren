@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Mvc;
 using BusinessLogic.DataHandler;
 using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
     //[Authorize]
+    //[RequireHttps]
     public class AbsenceController : ApiController
     {
         private AbsenceHandler _absenceHandler = new AbsenceHandler();
@@ -24,7 +26,7 @@ namespace ITMApp_WebAPI.Controllers
             return Ok(absence);
         }
 
-        [HttpPut]
+        [System.Web.Http.HttpPut]
         public IHttpActionResult Post(AbsenceModel absence)
         {
             if (!ModelState.IsValid) return BadRequest();

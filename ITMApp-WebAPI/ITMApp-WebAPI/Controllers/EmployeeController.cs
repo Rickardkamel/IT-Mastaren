@@ -1,22 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Mvc;
 using BusinessLogic.DataHandler;
 using Contracts;
 
 namespace ITMApp_WebAPI.Controllers
 {
     //[Authorize]
-    [RoutePrefix("api/employee")]
+    //[RequireHttps]
+    [System.Web.Http.RoutePrefix("api/employee")]
     public class EmployeeController : ApiController
     {
         private EmployeeHandler _employeeHandler = new EmployeeHandler();
 
-        [Route("")]
+        [System.Web.Http.Route("")]
         public List<EmployeeModel> Get()
         {
             return _employeeHandler.GetAll();
         }
-        [Route("{id:int}")]
+        [System.Web.Http.Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             var employee = _employeeHandler.Get(id);
@@ -25,7 +27,7 @@ namespace ITMApp_WebAPI.Controllers
 
             return Ok(employee);
         }
-        [Route("{userName}")]
+        [System.Web.Http.Route("{userName}")]
         public IHttpActionResult Get(string userName)
         {
             var employee = _employeeHandler.GetUserName(userName);
@@ -34,7 +36,8 @@ namespace ITMApp_WebAPI.Controllers
 
             return Ok(employee);
         }
-        [Route("")]
+        //[AllowAnonymous]
+        [System.Web.Http.Route("")]
         public IHttpActionResult Post(EmployeeModel employee)
         {
             if (!ModelState.IsValid) return BadRequest();
@@ -43,7 +46,7 @@ namespace ITMApp_WebAPI.Controllers
 
             return Ok();
         }
-        [Route("{id:int}")]
+        [System.Web.Http.Route("{id:int}")]
         public IHttpActionResult Delete(int id)
         {
             if (!_employeeHandler.Delete(id)) return BadRequest();

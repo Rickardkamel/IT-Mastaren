@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\rickam\Desktop\WebAPIDone</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\rickam\Desktop\äsd</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -94,7 +94,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2016 14:37:16</publishTime>
     </File>
     <File Include="bin/ITMApp-WebAPI.dll">
-      <publishTime>07/05/2016 15:05:42</publishTime>
+      <publishTime>07/06/2016 10:53:32</publishTime>
     </File>
     <File Include="bin/Mappers.dll">
       <publishTime>07/05/2016 15:05:38</publishTime>
@@ -334,7 +334,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2016 14:37:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/28/2016 13:14:58</publishTime>
+      <publishTime>07/06/2016 10:28:29</publishTime>
     </File>
   </ItemGroup>
 </Project>
