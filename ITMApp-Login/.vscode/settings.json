@@ -1,9 +1,0 @@
-// Place your settings in this file to overwrite the default settings
-{
-    "files.autoSave": "afterDelay",
-
-    "editor.lineHeight": 0,
-    "editor.wrappingColumn": 200,
-    "editor.fontFamily": "Comic Sans Ms",
-    "editor.fontSize": 15
-}
