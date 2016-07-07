@@ -1,0 +1,111 @@
+/* Empty. Add your own CSS if you like */
+.table-header .col {
+    background-color: #444444;
+}
+
+i.ion-ios-plus-empty{
+    text-align: center;
+    color: #F6A01C;
+}
+
+.odd {
+    background-color: lightgrey;    
+}
+
+.popup-buttons .button{
+    color: #444444;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ion-option-button.button-orange {
+    border-color: transparent;
+    background-color: #F6A01C;
+    color: #444444; 
+}
+
+.upper-box{
+     background-color: #444444;
+    color: #F6A01C;
+    text-align: center;
+    margin-top: -16px;
+    margin-left: 40px;;
+    height: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; 
+    padding-top: 10px;
+        
+}.upper-box h3{
+    color: #F6A01C;    
+}.upper-box h5{
+    margin-top: -7px;
+    color: #F6A01C;
+}
+
+.itm-black {
+        color:#444444;
+}
+
+.itm-orange {
+        color: #F6A01C;
+}
+
+.bottom-button {
+    color: #444444 !important;
+    border-radius: 20px;
+    position: absolute;
+    right:    0;
+    bottom:   0;
+}
+
+/*html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 300px;
+        height: 500px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }*/
+
+
+
+/*.modal{
+  top: 20% !important;
+  right: 20% !important;
+  bottom: 20% !important;
+  left: 20% !important;
+  overflow: visible !important;
+  min-height: 240px !important;
+  width: 60% !important;
+}*/
+
+
+.slider {
+  height: 600px;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
